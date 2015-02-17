@@ -1,0 +1,32 @@
+/* TEAM */
+	Owner: Ron Scott-Adams
+	Contact: ron [at] tohuw.net
+	Twitter: @Tohuw
+
+/* THANKS */
+    The Jekyll project
+
+    Peter Gumeson for the original compass-h5bp extension
+
+    Tipue for Tipue Search, a genius product
+
+    StackOverflow, without which all would surely perish
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	IDE: Sublime Text
+        Ruby
+            Gem
+            Bundler
+            Sass
+            Compass
+
+        HTML5, JavaScript, CSS3
+            HTML5 Boilerplate (styles via compass-html5bp extension)
+            jQuery
+            Modernizr
+
+    Serving:
+        Prod: Debian, rsync, nginx
+        Dev: OS X, Ruby, Jekyll
