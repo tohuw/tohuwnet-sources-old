@@ -1,0 +1,5 @@
+{% if site.tipue_search %}
+    <form action="{{ site.baseurl }}/{{ site.searchurl }}" class="searchform">
+        <input type="search" name="q" id="tipue_search_input" class="searchbox" autocomplete="on" placeholder="&#xf002; {{ searchbox_text }}">
+    </form>
+{% endif %}
