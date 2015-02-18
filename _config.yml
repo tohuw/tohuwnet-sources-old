@@ -15,7 +15,7 @@ subtitle: 'Elucidating Systems Architecture, Operations, & Yak Shaving'
 tipue_search: true
 search_url: search
 searchbox_text: 'Search... (type & press enter)'
-social: [["<span class='fa-twitter'></span>", twitter_username], ["<span class='fa-linkedin'></span>", "https://linkedin.com/in/tohuw"], ["<span class='fa-github'></span>", github_username]]
+linkedin_username: tohuw
 feed.title: '<span class="fa-rss"></span>'
 
 # Where things are

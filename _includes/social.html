@@ -4,10 +4,10 @@
             <h1>{{ site.social_title }}</h1>
         {% endif %}
         <ul>
-            <li><a class="social-link" href="{{ site.baseurl }}/feed.xml" rel="alternate">{{ feed.title }}</a>
-            {% for sociallink in site.social %}
-                <li><a class="social-link" target="_blank" href="{{ sociallink[0] }}">{{ sociallink[1] }}</a>
-            {% endfor %}
+            <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="fa-rss"></span></a>
+            <li><a class="social-link" href="https://twitter.com/{{ site.twitter_username }}"><span class="fa-twitter"></span></a>
+            <li><a class="social-link" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="fa-linkedin"></span></a>
+            <li><a class="social-link" href="https://github.com/{{ site.github_username }}"><span class="fa-linkedin"></span></a>
         </ul>
     </aside>
 {% endif %}
