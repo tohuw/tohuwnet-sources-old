@@ -1,8 +1,3 @@
-{{ site.links }}
-{% for link in site.links %}
-  <li><a href="{{ link[2] }}" target="_blank">{{ link[0] }} {{ link[1] }}</a>
-{% endfor %}
-
 {% if site.links %}
   <div class="links">
     {% if site.links_title %}
@@ -10,7 +5,7 @@
     {% endif %}
     <ul>
       {% for link in site.links %}
-        <li><a href="{{ link[2] }}" target="_blank">{{ link[0] }} {{ link[1] }}</a>
+        <li><a href="{{ link.url }}" target="_blank">{{ link.name }} {{ link.subtitle }}</a>
       {% endfor %}
     </ul>
   </div>

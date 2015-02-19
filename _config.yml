@@ -12,6 +12,7 @@ github_username:  tohuw
 language: en
 author: Ron Scott-Adams
 subtitle: Elucidating Systems Architecture, Operations, & Yak Shaving
+home_posts: 1
 tipue_search: true
 search_url: search
 searchbox_text: Search... (type & press enter)
