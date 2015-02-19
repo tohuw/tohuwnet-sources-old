@@ -2,12 +2,22 @@
 layout: default
 ---
 
-{{ site.posts.title }}
-<header class="post-header">
-  <h1 class="post-title">{{ site.posts.title | first }}</h1>
-  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-</header>
+{% for post in site.posts limit:1 %}
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+    <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+    {% if post.categories %}
+      in
+      {% for category in post.categories %}
+        {{ category }}{% if forloop.last != true %}, {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if post.author %}
+     by {{ post.author }}
+    {% endif %}</p>
+  </header>
 
-<article class="post-content">
-  {{ content }}
-</article>
+  <article class="post-content">
+    {{ post.content }}
+  </article>
+{% endfor %}

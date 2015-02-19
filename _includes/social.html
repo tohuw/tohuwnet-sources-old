@@ -1,17 +1,17 @@
 <div class="social">
-  {% if site.social_title %}
-    <h1>{{ site.social_title }}</h1>
+  {% if site.data.social.social_title %}
+    <h1>{{ site.data.social.social_title }}</h1>
   {% endif %}
   <ul>
     <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="fa-rss"></span></a>
-    {% if site.twitter_username %}
-      <li><a class="social-link" href="https://twitter.com/{{ site.twitter_username }}"><span class="fa-twitter"></span></a>
+    {% if site.data.social.twitter_username %}
+      <li><a class="social-link" href="https://twitter.com/{{ site.data.social.twitter_username }}"><span class="fa-twitter"></span></a>
     {% endif %}
-    {% if site.linkedin_username %}
-      <li><a class="social-link" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="fa-linkedin"></span></a>
+    {% if site.data.social.linkedin_username %}
+      <li><a class="social-link" href="https://linkedin.com/in/{{ site.data.social.linkedin_username }}"><span class="fa-linkedin"></span></a>
     {% endif %}
-    {% if site.github_username %}
-      <li><a class="social-link" href="https://github.com/{{ site.github_username }}"><span class="fa-linkedin"></span></a>
+    {% if site.data.social.github_username %}
+      <li><a class="social-link" href="https://github.com/{{ site.data.social.github_username }}"><span class="fa-linkedin"></span></a>
     {% endif %}
   </ul>
 </div>

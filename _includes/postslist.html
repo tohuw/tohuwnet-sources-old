@@ -1,13 +1,22 @@
-{% if site.articles_display_recent %}
-  <aside class="recent-articles">
-    {% if site.articles_recent_title %}
-      <h1>{{ site.articles_recent_title }}</h1>
+{% if site.data.layout.recentposts_display %}
+  <div class="recent-articles">
+    {% if site.data.layout.recentposts_title %}
+      <h1>{{ site.data.layout.recentposts_title }}</h1>
     {% endif %}
     <ol class="post-list">
-      {% for post in site.posts limit:{{ site.data.layout.recent_posts }} %}
+      {% for post in site.posts limit:{{ site.data.layout.recentposts_count }} %}
         <li><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+          {% if post.categories %}
+            in
+            {% for category in post.categories %}
+              {{ category }}{% if forloop.last != true %}, {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if post.author %}
+           by {{ post.author }}
+          {% endif %}</p>
       {% endfor %}
     </ol>
-  </aside>
+  </div>
 {% endif %}

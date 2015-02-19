@@ -18,3 +18,6 @@ trim_trailing_whitespace = false
 [*.{scss,html}]
 indent_size = 2
 indent_style = space
+
+[*.html]
+trim_trailing_whitespace = false

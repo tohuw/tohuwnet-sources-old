@@ -1,9 +1,10 @@
 <footer class="site-footer">
   {% include postslist.html %}
   {% include links.html %}
-  {% if site.data.layout.license_display %}
-    <p class="license">
-      content is <a href="{{ site.data.metadata.license_url }}">{{ site.data.metadata.license_title }}</a>
-    </p>
-  {% endif %}
+  <p class="site-info">
+    powered by <a href="http://jekyllrb.com">Jeykll</a>+<a href="#">Imprimatur</a>
+    {% if site.data.layout.license_display %}
+      // content is <a href="{{ site.data.metadata.license_url }}">{{ site.data.metadata.license_title }}</a>
+    {% endif %}
+  </p>
 </footer>

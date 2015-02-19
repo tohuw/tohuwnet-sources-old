@@ -1,2 +1,4 @@
-recent_posts: 1
+recentposts_display: true
+recentposts_title: More, Here
+recentposts_count: 3
 license_display: true
