@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.7)
     blankslate (2.1.2.4)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -12,6 +13,7 @@ GEM
       execjs
     coffee-script-source (1.9.0)
     colorator (0.1)
+    colored (1.2)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -26,12 +28,22 @@ GEM
       compass (~> 1.0, >= 1.0.3)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    ethon (0.7.2)
+      ffi (>= 1.3.0)
     execjs (2.3.0)
     fast-stemmer (1.0.2)
     ffi (1.9.6)
     font-awesome-sass (4.3.1)
       sass (~> 3.2)
     hitimes (1.2.2)
+    html-proofer (2.1.0)
+      addressable (~> 2.3)
+      colored (~> 1.2)
+      mercenary (~> 0.3.2)
+      nokogiri (~> 1.5)
+      parallel (~> 1.3)
+      typhoeus (~> 0.7)
+      yell (~> 2.0)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -62,7 +74,11 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
+    mini_portile (0.6.2)
     multi_json (1.10.1)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    parallel (1.4.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.9)
@@ -84,7 +100,10 @@ GEM
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
+    typhoeus (0.7.1)
+      ethon (>= 0.7.1)
     yajl-ruby (1.2.1)
+    yell (2.0.5)
 
 PLATFORMS
   ruby
@@ -94,6 +113,7 @@ DEPENDENCIES
   compass (>= 1.0.3)
   compass-html5bp (>= 1.0.0)
   font-awesome-sass (>= 4.3.0)
+  html-proofer (>= 2.1.0)
   jekyll (>= 2.5.3)
   rouge (>= 1.8.0)
   scss-lint (>= 0.33.0)
