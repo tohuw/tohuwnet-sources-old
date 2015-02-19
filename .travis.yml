@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.2.0
+- 2.1
 script: jekyll build # && htmlproof ./_site
 
 env:
