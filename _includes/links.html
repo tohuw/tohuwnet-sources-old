@@ -1,3 +1,8 @@
+{{ site.links }}
+{% for link in site.links %}
+  <li><a href="{{ link[2] }}" target="_blank">{{ link[0] }} {{ link[1] }}</a>
+{% endfor %}
+
 {% if site.links %}
   <div class="links">
     {% if site.links_title %}

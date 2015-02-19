@@ -1,20 +1,20 @@
 # Site settings
 title: Tohuw.Net
 email: ron@tohuw.net
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Elucidating Systems Architecture, Operations, & Yak Shaving
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://tohuw.net" # the base hostname & protocol for your site
+baseurl: ""
+url: https://tohuw.net
 twitter_username: tohuw
 github_username:  tohuw
 
 # Custom settings
 language: en
 author: Ron Scott-Adams
-subtitle: "Elucidating Systems Architecture, Operations, & Yak Shaving"
+subtitle: Elucidating Systems Architecture, Operations, & Yak Shaving
 tipue_search: true
 search_url: search
-searchbox_text: "Search... (type & press enter)"
+searchbox_text: Search... (type & press enter)
 linkedin_username: tohuw
 links:
     - name: HighExecutive.Net
