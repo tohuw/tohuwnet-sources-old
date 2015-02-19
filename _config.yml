@@ -11,12 +11,19 @@ github_username:  tohuw
 # Custom settings
 language: en
 author: Ron Scott-Adams
-subtitle: 'Elucidating Systems Architecture, Operations, & Yak Shaving'
+subtitle: "Elucidating Systems Architecture, Operations, & Yak Shaving"
 tipue_search: true
 search_url: search
-searchbox_text: 'Search... (type & press enter)'
+searchbox_text: "Search... (type & press enter)"
 linkedin_username: tohuw
-feed.title: '<span class="fa-rss"></span>'
+links: [["HighExecutive.Net (Ruminations of my illustrious wife)", "http://highexecutive.net"], ["UberMarianne.com (My Sister-In-Law Introspects)", "http://ubermarianne.net"], ["Dadhacker (Cantankerous and full of good stories)", "http://dadhacker.com"], ["Punching Clouds (A practical and interesting virtualization blog)", "http://punchingclouds.com"], ["Cormac Hogan (Virtualization and storage at a comprehenisble depth)", "http://cormachogan.com"]]
+license_display: true
+license_title: "CC BY-NC-SA 4.0"
+license_url: https://tohuw.net/rights/
+# google_analytics:
+# gosquared_sitename:
+# piwik_url: https://tohuw.net/stats
+# piwik_siteid: 1
 
 # Where things are
 source:      .

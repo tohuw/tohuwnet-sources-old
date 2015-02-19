@@ -11,10 +11,17 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
 
     {% include footer.html %}
 
-  </body>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+    {% include googleanalytics.html %}
+    {% include piwik.html %}
+    {% include gosquared.html %}
 
+  </body>
 </html>

@@ -1,0 +1,13 @@
+{% if site.articles_display_recent %}
+  <aside class="recent-articles">
+    {% if site.articles_recent_title %}
+      <h1>{{ site.articles_recent_title }}</h1>
+    {% endif %}
+    <ol>
+      {% for post in site.posts %}
+        <li><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      {% endfor %}
+    </ol>
+  </aside>
+{% endif %}
