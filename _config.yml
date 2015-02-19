@@ -5,41 +5,6 @@ description: >
   Elucidating Systems Architecture, Operations, & Yak Shaving
 baseurl: ""
 url: https://tohuw.net
-twitter_username: tohuw
-github_username:  tohuw
-
-# Custom settings
-language: en
-author: Ron Scott-Adams
-subtitle: Elucidating Systems Architecture, Operations, & Yak Shaving
-home_posts: 1
-tipue_search: true
-search_url: search
-searchbox_text: Search... (type & press enter)
-linkedin_username: tohuw
-links:
-    - name: HighExecutive.Net
-      subtitle: (Ruminations of my illustrious wife)
-      link: http://highexecutive.net
-    - name: UberMarianne.com
-      subtitle: (My Sister-In-Law Introspects)
-      link: http://ubermarianne.net
-    - name: Dadhacker
-      subtitle: (Cantankerous and full of good stories)
-      link: http://dadhacker.com
-    - name: Punching Clouds
-      subtitle: (A practical and interesting virtualization blog)
-      link: http://punchingclouds.com
-    - name: Cormac Hogan
-      subtitle: (Virtualization and storage at a comprehenisble depth)
-      link: http://cormachogan.com
-license_display: true
-license_title: "CC BY-NC-SA 4.0"
-license_url: https://tohuw.net/rights/
-# google_analytics:
-# gosquared_sitename:
-# piwik_url: https://tohuw.net/stats
-# piwik_siteid: 1
 
 # Where things are
 source:      .

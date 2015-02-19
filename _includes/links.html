@@ -1,10 +1,10 @@
-{% if site.links %}
-  <div class="links">
-    {% if site.links_title %}
-    <h1>{{ site.links_title }}</h1>
+{% if site.data.social.blogroll %}
+  <div class="blogroll">
+    {% if site.data.social.blogroll_title %}
+    <h1>{{ site.data.social.blogroll_title }}</h1>
     {% endif %}
     <ul>
-      {% for link in site.links %}
+      {% for link in site.data.social.blogroll %}
         <li><a href="{{ link.url }}" target="_blank">{{ link.name }} {{ link.subtitle }}</a>
       {% endfor %}
     </ul>

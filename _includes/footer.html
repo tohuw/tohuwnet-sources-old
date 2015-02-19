@@ -1,9 +1,9 @@
-<footer class="bottom">
+<footer class="site-footer">
   {% include postslist.html %}
   {% include links.html %}
-  {% if site.license_display %}
+  {% if site.data.layout.license_display %}
     <p class="license">
-      content is <a href="{{ site.license_url }}">{{ site.license_title }}</a>
+      content is <a href="{{ site.data.metadata.license_url }}">{{ site.data.metadata.license_title }}</a>
     </p>
   {% endif %}
 </footer>
