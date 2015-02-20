@@ -1,0 +1,9 @@
+{% assign resultspage = true %}
+
+{% if site.data.search.enabled %}
+  <script type="text/javascript" src="/js/tipuesearch_set.js"></script>
+  <script type="text/javascript" src="/js/tipuesearch.min.js"></script>
+  <script type="text/javascript" src="/js/tipuesearch_results.js"></script>
+  
+  <div id="tipue_search_content"></div>
+{% endif %}

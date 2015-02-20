@@ -6,6 +6,7 @@ gem 'font-awesome-sass', '>= 4.3.0'
 gem 'coffee-script', '>= 2.3.0'
 gem 'rouge', '>= 1.8.0'
 group :test do
+  gem 'rubocop', '>=  0.15.0'
   gem 'html-proofer', '>= 2.1.0'
   gem 'scss-lint', '>= 0.33.0'
 end

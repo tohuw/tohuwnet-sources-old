@@ -1,3 +1,2 @@
-tipue_search: true
-search_url: search
-searchbox_text: Search... (type & press enter)
+enabled: true
+results_count: 10
