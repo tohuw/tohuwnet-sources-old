@@ -21,7 +21,11 @@ layout: default
     {% else %}
       {{ site.data.layout.readtime_title }}
     {% endif %}
-      {{ page.content | readtime }}
+    {% if page.content | readtime == 0 %}
+      less than a minute
+    {% else %}
+      {{ page.content | readtime | pluralize: "minute" }}
+    {% endif %}
   {% endif %}</p>
 </header>
 

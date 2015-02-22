@@ -11,7 +11,7 @@ $('#tipue_search_input')
         $(this).focus();
     })
     .blur(function() {
-        if ($(this).attr("class").indexOf("resultspage") > 0) {
+        if ($(this).attr("class").indexOf("resultspage") == -1) {
             $(this).val("");
             $(this).attr("placeholder", "\uf002");
         }

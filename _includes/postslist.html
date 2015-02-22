@@ -23,7 +23,16 @@
             {% else %}
               {{ site.data.layout.readtime_title }}
             {% endif %}
-              {{ post.content | readtime }}
+              {% if post.content | readtime == 0 %}
+                less than a minute
+              {% else %}
+                {{ post.content | readtime | pluralize: "minute" }}
+              {% endif %}
+          {% endif %}</p>
+          <p class="post-summary">{% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 20 }}
           {% endif %}</p>
       {% endfor %}
     </ol>

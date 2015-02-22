@@ -8,14 +8,14 @@
 # http://www.ncbi.nlm.nih.gov/pubmed/18802819
 
 # Usage: {{ page.content | readtime }}
-# will emit as e.g. "4 minutes" or "1 minute"
+# Will emit as an integer.
+# See for a suggested implementation.
 module ReadTime
   def readtime(input)
     words_per_minute = 200
     words = input.split.size
-    minutes = (words / words_per_minute).floor
-    minutes_label = minutes == 1 ? ' minute' : ' minutes'
-    minutes > 0 ? "#{minutes} #{minutes_label}" : 'less than a minute'
+    readtime = (words / words_per_minute).floor
+    readtime
   end
 end
 
