@@ -2,3 +2,7 @@ recentposts_display: true
 recentposts_title: More, Here
 recentposts_count: 3
 license_display: true
+categories_position: footer
+readtime_display: true
+readtime_title: icon
+categories_tags_combine: false

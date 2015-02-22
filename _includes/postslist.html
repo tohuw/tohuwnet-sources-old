@@ -7,7 +7,7 @@
       {% for post in site.posts limit:{{ site.data.layout.recentposts_count }} %}
         <li><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
           <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
-          {% if post.categories %}
+          {% if post.categories and site.data.layout.categories_position == "header" %}
             in
             {% for category in post.categories %}
               {{ category }}{% if forloop.last != true %}, {% endif %}
@@ -15,6 +15,15 @@
           {% endif %}
           {% if post.author %}
            by {{ post.author }}
+          {% endif %}
+          {% if site.data.layout.readtime_display %}
+            - 
+            {% if site.data.layout.readtime_title == "icon" %}
+              <span class="fa-oclock"></span>
+            {% else %}
+              {{ site.data.layout.readtime_title }}
+            {% endif %}
+              {{ post.content | readtime }}
           {% endif %}</p>
       {% endfor %}
     </ol>

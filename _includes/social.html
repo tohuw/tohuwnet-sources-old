@@ -3,15 +3,43 @@
     <h1>{{ site.data.social.social_title }}</h1>
   {% endif %}
   <ul>
-    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="fa-rss"></span></a>
+    <li>
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+        {% if site.data.social.rss_title == "icon" %}
+          <span class="fa-rss"></span>
+        {% else %}
+          {{ site.data.social.rss_title }}
+        {% endif %}
+      </a>
     {% if site.data.social.twitter_username %}
-      <li><a class="social-link" href="https://twitter.com/{{ site.data.social.twitter_username }}"><span class="fa-twitter"></span></a>
+      <li>
+        <a class="social-link" href="https://twitter.com/{{ site.data.social.twitter_username }}">
+          {% if site.data.social.twitter_title == "icon" %}
+            <span class="fa-twitter"></span>
+          {% else %}
+            {{ site.data.social.twitter_title }}
+          {% endif %}
+        </a>
     {% endif %}
     {% if site.data.social.linkedin_username %}
-      <li><a class="social-link" href="https://linkedin.com/in/{{ site.data.social.linkedin_username }}"><span class="fa-linkedin"></span></a>
+      <li>
+        <a class="social-link" href="https://linkin.com/in/{{ site.data.social.linkedin_username }}">
+          {% if site.data.social.linkedin_title == "icon" %}
+            <span class="fa-linkedin"></span>
+          {% else %}
+            {{ site.data.social.linkedin_title }}
+          {% endif %}
+        </a>
     {% endif %}
     {% if site.data.social.github_username %}
-      <li><a class="social-link" href="https://github.com/{{ site.data.social.github_username }}"><span class="fa-linkedin"></span></a>
+      <li>
+        <a class="social-link" href="https://github.com/{{ site.data.social.github_username }}">
+          {% if site.data.social.github_title == "icon" %}
+            <span class="fa-github"></span>
+          {% else %}
+            {{ site.data.social.github_title }}
+          {% endif %}
+        </a>
     {% endif %}
   </ul>
 </div>
