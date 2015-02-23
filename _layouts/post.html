@@ -8,24 +8,29 @@ layout: default
   {% if page.categories and site.data.layout.categories_position == "header" %}
     in
     {% for category in page.categories %}
-      <span class="category">{{ category }}</span>
+      {{ category }}{% if forloop.last != true %}, {% endif %}
     {% endfor %}
   {% endif %}
   {% if page.author %}
    by {{ page.author }}
   {% endif %}
   {% if site.data.layout.readtime_display %}
-    - 
+    -
     {% if site.data.layout.readtime_title == "icon" %}
       <span class="fa-oclock"></span>
     {% else %}
       {{ site.data.layout.readtime_title }}
     {% endif %}
-    {% if page.content | readtime == 0 %}
-      less than a minute
-    {% else %}
-      {{ page.content | readtime | pluralize: "minute" }}
-    {% endif %}
+      {% if page.content | readtime == 0 %}
+        less than a minute
+      {% else %}
+        {{ page.content | readtime | pluralize: "minute" }}
+      {% endif %}
+  {% endif %}</p>
+  <p class="post-summary">{% if page.summary %}
+    {{ page.summary }}
+  {% else %}
+    {{ page.content | strip_html | truncatewords: 20 }}
   {% endif %}</p>
 </header>
 
