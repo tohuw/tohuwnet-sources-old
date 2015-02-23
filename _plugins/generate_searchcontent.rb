@@ -19,7 +19,7 @@
 
 require 'json'
 module Jekyll
-  # This object represents page information to be written to the JSON file.
+  # Page information to be written to the JSON file.
   class TipuePage
     # Initializes a new TipuePage.
     #  +title+ Page Title
@@ -45,6 +45,7 @@ module Jekyll
   # This generator recreates js/searchcontent.js on every `jekyll build`
   class TipueGenerator < Generator
     safe true
+
     def generate(site)
       target = File.open('js/searchcontent.js', 'w')
       target.truncate(target.size)
@@ -58,7 +59,7 @@ module Jekyll
           page.data['title'],
           "#{page.data['tags']} #{page.data['categories']}",
           page.url,
-          page.to_s
+          page.content
         )
         target.puts(tp_page.to_json + ',')
       end
@@ -68,7 +69,7 @@ module Jekyll
         last.data['title'],
         "#{last.data['tags']} #{last.data['categories']}",
         last.url,
-        last.to_s
+        last.content
       )
       target.puts(tp_page.to_json)
 
