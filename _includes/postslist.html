@@ -1,0 +1,13 @@
+{% if site.data.layout.recentposts_display %}
+  <div class="recent-articles">
+    {% if site.data.layout.recentposts_title %}
+      <h1>{{ site.data.layout.recentposts_title }}</h1>
+    {% endif %}
+    <ol class="post-list">
+      {% for post in site.posts limit:{{ site.data.layout.recentposts_count }} %}
+        <li><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          {% include postsmeta.html %}
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}
