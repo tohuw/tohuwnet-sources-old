@@ -1,0 +1,7 @@
+category_dir: topics
+prefixes:
+  title: ""
+  meta_description: "Topic: "
+feed:
+  enabled: false
+  count: 5

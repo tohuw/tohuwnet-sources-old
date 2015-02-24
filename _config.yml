@@ -30,7 +30,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      []
+gems: []
 
 # Conversion
 markdown:    kramdown
@@ -102,3 +102,15 @@ titlecase: true
 post_template: post
 page_template: page
 draft_template: draft
+
+linkblog:
+  linkpost:
+    marker: →
+    marker_position: after
+  posts:
+    marker: false
+    marker_position: before
+
+  titlecase: true
+  unorphan: true
+  permalink_label: Permalink
