@@ -31,6 +31,7 @@ page_template: page
 draft_template: draft
 
 # Build settings
+exclude: [vendor]
 markdown: kramdown
 highlighter: rouge
 
