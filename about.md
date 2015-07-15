@@ -34,8 +34,6 @@ I like to think about the technical and the philosophical aspects of today's inf
 
 I'll write about these sort of things, and also some non-introspective technical stuff I'd like to share, because too much navel-gazing is bad for the neck.
 
-In true fashion, I'll conclude with the obligatory: my statements and opinions are my own, and don't necessarily represent my employer, or anyone else. Your opinions are your own, too. I have comments enabled on my articles; you may share them there. I guarantee no results beyond catharsis. You can delete them within an hour, which, I can assure you, is plenty of time to regret typing something foolish. There's a [license for the site](/rights); you can read that if you want to make these words appear elsewhere in the world. Whether the world does (or should) take umbrage when you do this is not explicitly dealt with here.
-
 [^dasblinkenlights]: I'd be remiss to not recall here "[DAS BLINKENLIGHTS](https://wikipedia.org/wiki/Blinkenlights)", which sums up the regretful kind of humor from which my profession stems.
 
 [^notabug]: A common joke among developers is that some problem with their software is "not a bug, it's a feature". This doesn't matter; disliked features are relative bugs.
