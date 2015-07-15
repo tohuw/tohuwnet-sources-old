@@ -8,7 +8,7 @@ group :jekyll_plugins do
 end
 group :css do
   gem 'compass', '>= 1.0.3'
-  gem 'compass-html5bp', '>= 1.0.0'
+  gem 'compass-h5bp', '>= 1.0.0'
   gem 'font-awesome-sass', '>= 4.3.0'
 end
 group :test do

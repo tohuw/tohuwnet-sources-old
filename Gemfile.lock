@@ -27,7 +27,7 @@ GEM
     compass-core (1.0.3)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
-    compass-html5bp (1.0.0)
+    compass-h5bp (1.0.0)
       compass (~> 1.0, >= 1.0.3)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
@@ -139,7 +139,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script (>= 2.3.0)
   compass (>= 1.0.3)
-  compass-html5bp (>= 1.0.0)
+  compass-h5bp (>= 1.0.0)
   font-awesome-sass (>= 4.3.0)
   html-proofer (>= 2.1.0)
   jekyll (>= 2.5.3)
