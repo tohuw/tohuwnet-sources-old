@@ -33,7 +33,7 @@ draft_template: draft
 # Build settings
 exclude: [vendor]
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
 minify_html: false
 html_press:
   unquoted_attributes: false
