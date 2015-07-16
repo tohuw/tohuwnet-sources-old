@@ -34,7 +34,33 @@ draft_template: draft
 exclude: [vendor]
 markdown: kramdown
 highlighter: rouge
+minify_html: false
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: false
+  strip_crlf: false
+  js_minifier_options: false
+asset_pipeline:
+  combine_css: true
+  compress_css: true
+  order_css: []
+  combine_js: true
+  compress_js: true
+  order_js: []
 
 # Social
 twitter_username: tohuw
 github_username: tohuw
+
+# Linkblog
+linkblog:
+  linkpost:
+    marker: →
+    marker_position: after
+  posts:
+    marker: false
+    marker_position: before
+
+  titlecase: true
+  unorphan: true
+  permalink_label: Permalink

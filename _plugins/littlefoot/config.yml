@@ -1,0 +1,10 @@
+theme: light           # light or dark
+
+# To override footnote theme colors uncomment and change the values below:
+#background: '#fff' # footnote popover background
+#text: '#444'       # popover text color
+
+button-color: inherit  # matches text color
+
+font-size: .9em
+max-width: 500px
