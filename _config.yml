@@ -33,7 +33,6 @@ draft_template: draft
 # Build settings
 exclude: [vendor]
 markdown: kramdown
-# highlighter: rouge
 minify_html: false
 html_press:
   unquoted_attributes: false
@@ -47,6 +46,20 @@ asset_pipeline:
   combine_js: true
   compress_js: true
   order_js: []
+sass:
+    sass_dir: _compass
+
+# Sitemap
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
 
 # Social
 twitter_username: tohuw

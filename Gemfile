@@ -21,6 +21,7 @@ group :jekyll_plugins do
   gem 'octopress-image-tag', '>= 1.1.0'
   gem 'octopress-escape-code', '>= 2.0.6'
   gem 'octopress-abort-tag', '>= 1.0.2'
+  gem 'jekyll-compass', '>= 1.2.0'
 end
 group :css do
   gem 'compass', '>= 1.0.3'
