@@ -2,6 +2,7 @@
 layout: page
 title: Ron Scott-Adams
 permalink: /ron-scott-adams/
+menuitem: true
 ---
 > We're stuck with technology when what we really want is just stuff that works.
 > (Douglas Adams)
