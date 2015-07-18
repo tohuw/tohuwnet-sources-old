@@ -48,7 +48,6 @@ asset_pipeline:
   order_js: []
 sass:
     sass_dir: _compass
-privpub_path: /misc
 
 # Sitemap
 sitemap:
