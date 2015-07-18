@@ -7,24 +7,32 @@ redirect_to:
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if post.updated %} • Updated: {{ post.date_time_updated_html | timeago }}{% endif %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} • <span class="readtime" title"Estimated reading time">{% capture readtime %}{{ content | reading_time }}{% endcapture %}{{ readtime | apnumber }} minute{% if readtime != "1" %}s{% endif %}</span></p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if post.updated %} • Updated: {{ post.date_time_updated_html | timeago }}{% endif %}{% if page.categories %} • topics: {% for category in page.categories %}{% categorylink category %}{{ category }}{% endcategorylink %}, {% endfor %}{% endif %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} • <span class="readtime" title"Estimated reading time">{% capture readtime %}{{ content | reading_time }}{% endcapture %}about {{ readtime | apnumber }} minute{% if readtime != "1" %}s{% endif %}</span></p>
   </header>
 
   <article class="post-content">
     {{ content }}
   </article>
 
-  {% for post in site.related_posts limit:4 %}
-    {% if post.thumbnail_image %}
-      <a href="{{ post.url }}" style="background-image: url({{ post.thumbnail_image }})" alt="{{ post.title }}" class="thumbnail"></a>
-    {% else %}
-      {{ post.content | thumbnail_url: post.url, post.title }}
-    {% endif %}
-  {% endfor %}
+  <footer class="post-footer">
+    <ul class="tags">
+      {% for tag in page.tags %}
+        <li><a href="{{ site.url}}/{{ site.tag_page_dir}}/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    </ul>
 
-  {% if page.comments %}{% include disqus_embed.html %}{% endif %}
+    {% for post in site.related_posts limit:4 %}
+      {% if post.thumbnail_image %}
+        <a href="{{ post.url }}" style="background-image: url({{ post.thumbnail_image }})" alt="{{ post.title }}" class="thumbnail"></a>
+      {% else %}
+        {{ post.content | thumbnail_url: post.url, post.title }}
+      {% endif %}
+    {% endfor %}
 
-  {% capture permalink %}{{ site.url }}{{ page.url }}{% endcapture %}
-  {% webmentions permalink %}
+    {% if page.comments %}<a href="https://twitter.com/share" class="twitter-share-button" data-via="Tohuw" data-size="large" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>{% endif %}
+
+    {% capture permalink %}{{ site.url }}{{ page.url }}{% endcapture %}
+    {% webmentions permalink %}
+  </footer>
 
 </div>
