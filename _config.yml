@@ -31,7 +31,7 @@ page_template: page
 draft_template: draft
 
 # Build settings
-exclude: [vendor, rake]
+exclude: [rake]
 markdown: kramdown
 minify_html: false
 html_press:
@@ -40,10 +40,12 @@ html_press:
   strip_crlf: false
   js_minifier_options: false
 asset_pipeline:
+  stylesheets_dir: /css
   combine_css: true
   compress_css: true
   order_css: []
-  combine_js: true
+  javascripts_dir: /js
+  combine_js: false
   compress_js: true
   order_js: []
 sass:
