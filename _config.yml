@@ -10,7 +10,7 @@ url: "https://tohuw.net"
 timezone: America/New_York
 
 # Taxonomy
-permalink: /posts/:title/
+permalink: /posts/:title
 paginate_path: /pages/:num/
 
 # Default extension for new posts and pages
@@ -48,6 +48,7 @@ asset_pipeline:
   order_js: []
 sass:
     sass_dir: _compass
+privpub_path: /misc
 
 # Sitemap
 sitemap:
@@ -61,9 +62,27 @@ sitemap:
     change_frequency_name: "change_frequency"
     priority_name: "priority"
 
+# Categories
+category_archive:
+    layout: category_archive
+    path: topic
+    slugify: true
+
+# Tags
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+ignored_tags:
+
 # Social
 twitter_username: tohuw
 github_username: tohuw
+linkin_username: tohuw
+facebook_username: tohuw
+buffer_access_token: 1/f404ae874af89c3f8941128118921350
+buffer_twitter_profile: true
+buffer_facebook_profile: true
+buffer_linkedin_profile: true
 
 # Linkblog
 linkblog:
