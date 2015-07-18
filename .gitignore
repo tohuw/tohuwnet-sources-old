@@ -1,4 +1,4 @@
 _site
+.cache
 .sass-cache
 .ink-cache
-*.sublime-*

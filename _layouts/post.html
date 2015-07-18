@@ -1,5 +1,7 @@
 ---
 layout: default
+redirect_from:
+redirect_to:
 ---
 <div class="post">
 
@@ -12,8 +14,11 @@ layout: default
     {{ content }}
   </article>
 
-{{ post.date }}
+  {{ post.date }}
 
-{% if page.comments %} {% include disqus_embed.html %} {% endif %}
+  {% if page.comments %}{% include disqus_embed.html %}{% endif %}
+
+  {% capture permalink %}{{ site.url }}{{ page.url }}{% endcapture %}
+  {% webmentions permalink %}
 
 </div>

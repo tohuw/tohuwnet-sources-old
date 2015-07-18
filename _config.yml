@@ -10,7 +10,7 @@ url: "https://tohuw.net"
 timezone: America/New_York
 
 # Taxonomy
-permalink: /articles/:title/
+permalink: /posts/:title/
 paginate_path: /pages/:num/
 
 # Default extension for new posts and pages
