@@ -82,6 +82,7 @@ buffer_access_token: 1/f404ae874af89c3f8941128118921350
 buffer_twitter_profile: true
 buffer_facebook_profile: true
 buffer_linkedin_profile: true
+webmentions_enabled: false
 
 # Linkblog
 linkblog:
