@@ -1,0 +1,5 @@
+{% if site.data.search.enabled %}
+    <form action="{{ site.baseurl }}/{{ site.search.url }}" class="searchform">
+        <input type="search" name="q" id="tipue_search_input" class="searchform" autocomplete="on" placeholder="&#xf002; {{ site.data.search.placeholder }}">
+    </form>
+{% endif %}
