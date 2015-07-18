@@ -1,11 +1,12 @@
 // Search Form Effects
-var searchPlaceholder = $('#tipue_search_input').attr("placeholder")
+var searchPlaceholder = $('#tipue_search_input').attr("placeholder");
 
 $('#tipue_search_input')
     .focus(function() {
-        if (!($(this).attr("placeholder") == searchPlaceholder) && $(this).attr("class").indexOf("resultspage") < 0) {
+        var isPlaceholder = $(this).attr("placeholder") == searchPlaceholder;
+        if (!isPlaceholder && $(this).attr("class").indexOf("resultspage") < 0) {
             $(this).attr("placeholder", searchPlaceholder);
-        };
+        }
     })
     .mouseenter(function() {
         $(this).focus();
