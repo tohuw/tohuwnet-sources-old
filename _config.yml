@@ -31,7 +31,7 @@ page_template: page
 draft_template: draft
 
 # Build settings
-exclude: [vendor]
+exclude: [vendor, rake]
 markdown: kramdown
 minify_html: false
 html_press:
