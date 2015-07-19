@@ -41,7 +41,7 @@ html_press:
   js_minifier_options: false
 asset_pipeline:
   stylesheets_dir: /css
-  combine_css: true
+  combine_css: false
   compress_css: true
   order_css: []
   javascripts_dir: /js
@@ -49,7 +49,7 @@ asset_pipeline:
   compress_js: true
   order_js: []
 sass:
-    sass_dir: _compass
+  sass_dir: _compass
 
 # Sitemap
 sitemap:
