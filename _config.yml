@@ -1,12 +1,13 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Tohuw.Net
+email: ron@tohuw.net
 description: >
   Ron Scott-Adams is a Systems Architect and Administrator, with a passion for
   creating, maintaining and explaining well-designed data centers,
   virtualization solutions, and information technology systems.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://tohuw.net" # the base hostname & protocol for your site
+timezone: America/New_York
 twitter_username: tohuw
 github_username:  tohuw
 
