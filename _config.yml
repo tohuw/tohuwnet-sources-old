@@ -40,12 +40,12 @@ html_press:
   strip_crlf: false
   js_minifier_options: false
 asset_pipeline:
-  stylesheets_dir: /css
-  combine_css: false
+  stylesheets_dir: '/stylesheets'
+  combine_css: true
   compress_css: true
   order_css: []
-  javascripts_dir: /js
-  combine_js: false
+  javascripts_dir: '/javascripts'
+  combine_js: true
   compress_js: true
   order_js: []
 sass:
