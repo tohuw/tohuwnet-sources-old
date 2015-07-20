@@ -15,5 +15,5 @@ trim_trailing_whitespace = true
 [*.{md,html}]
 trim_trailing_whitespace = false
 
-[*.{scss,html,rb}]
+[*.{scss,html,rb,yml}]
 indent_size = 2
