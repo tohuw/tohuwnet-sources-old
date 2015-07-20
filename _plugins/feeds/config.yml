@@ -12,13 +12,13 @@ permalink_label:  "Permalink"
 titles:
   main_feed:      Posts - :site_name
   links_feed:     Links - :site_name
-  articles_feed:  Articles - :site_name
-  category_feed:  Posts in :category - :site_name
+  articles_feed:  Posts - :site_name
+  category_feed:  Posts about :category - :site_name
   tag_feed:       Posts tagged with :tag - :site_name
 
 permalinks:
-  main_feed:      /feed/
-  links_feed:     /feed/links/
-  articles_feed:  /feed/articles/
-  category_feed:  /feed/categories/:category/
-  tag_feed:       /feed/tags/:tag/
+  main_feed:      /feeds/
+  links_feed:     /feeds/links/
+  articles_feed:  /feeds/articles/
+  category_feed:  /feeds/topic/:category/
+  tag_feed:       /feeds/tag/:tag/

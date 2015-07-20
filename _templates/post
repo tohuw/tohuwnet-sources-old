@@ -2,4 +2,15 @@
 layout: {{ layout }}
 title: "{{ title }}"
 date: {{ date }}
+date_updated:
+categories:
+tags:
+image:
+thumbnail_image:
+comments: true
+redirect_from:
+redirect_to:
+twitter_text:
+facebook_text:
+linkedin_text:
 ---
