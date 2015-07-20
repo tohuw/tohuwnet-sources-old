@@ -5,14 +5,13 @@ description: >
   Ron Scott-Adams is a Systems Architect and Administrator, with a passion for
   creating, maintaining and explaining well-designed data centers,
   virtualization solutions, and information technology systems.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://tohuw.net" # the base hostname & protocol for your site
+baseurl: ""
+url: "https://tohuw.net"
 timezone: America/New_York
-twitter_username: tohuw
-github_username:  tohuw
 
-# Build settings
-markdown: kramdown
+# Taxonomy
+permalink: /posts/:title
+paginate_path: /page/:num/
 
 # Default extension for new posts and pages
 post_ext: md
@@ -30,3 +29,60 @@ draft_template: draft
 
 # Format titles with titlecase?
 titlecase: true
+
+# Build settings
+exclude: []
+markdown: kramdown
+minify_html: false
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: false
+  strip_crlf: false
+  js_minifier_options: false
+asset_pipeline:
+  stylesheets_dir: '/css'
+  combine_css: true
+  compress_css: true
+  order_css: []
+  javascripts_dir: '/js'
+  combine_js: true
+  compress_js: false
+  order_js: []
+sass:
+  sass_dir: _sass
+
+# Categories
+category_archive:
+    layout: category_archive
+    path: topic
+    slugify: true
+
+# Tags
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+ignored_tags:
+
+# Social
+twitter_username: tohuw
+github_username: tohuw
+linkin_username: tohuw
+facebook_username: tohuw
+buffer_access_token: 1/f404ae874af89c3f8941128118921350
+buffer_twitter_profile: true
+buffer_facebook_profile: true
+buffer_linkedin_profile: true
+disqus_shortname: tohuw
+
+# Linkblog
+linkblog:
+  linkpost:
+    marker: →
+    marker_position: after
+  posts:
+    marker: false
+    marker_position: before
+
+  titlecase: true
+  unorphan: true
+  permalink_label: Permalink
