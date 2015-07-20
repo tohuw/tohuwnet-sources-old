@@ -1,6 +1,0 @@
----
-layout: {{ layout }}
-title: "{{ title }}"
-permalink:
-menuitem: true
----
