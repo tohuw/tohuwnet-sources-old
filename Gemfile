@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '>= 2.5.3'
 gem 'octopress', '>= 3.0.11'
 gem 'coffee-script', '>= 2.3.0'
+gem 'therubyracer', '>= 0.12.2'
 group :jekyll_plugins do
   gem 'jekyll-auto-image', '>= 1.0.1'
   gem 'jekyll-redirect-from', '>= 0.6.2'

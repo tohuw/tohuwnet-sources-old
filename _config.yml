@@ -86,3 +86,10 @@ linkblog:
   titlecase: true
   unorphan: true
   permalink_label: Permalink
+
+# Search
+lunr_search:
+ excludes: [rss.xml, atom.xml]
+ stopwords: "stopwords.txt"
+ min_length: 3
+ js_dir: "javascripts"

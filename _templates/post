@@ -13,4 +13,5 @@ redirect_to:
 twitter_text:
 facebook_text:
 linkedin_text:
+exclude_from_search: false
 ---
