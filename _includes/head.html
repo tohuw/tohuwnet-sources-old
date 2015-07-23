@@ -9,5 +9,10 @@
   {% css_asset_tag %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   {% feeds %}
+  {% if page.skip_jquery %}
+    <!-- Load jQuery from a specialized location -->
+  {% else %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  {% endif %}
   {% js_asset_tag %}
 </head>

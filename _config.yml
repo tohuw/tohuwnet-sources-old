@@ -45,9 +45,9 @@ asset_pipeline:
   compress_css: true
   order_css: []
   javascripts_dir: 'javascripts'
-  combine_js: true
-  compress_js: true
-  order_js: []
+  combine_js: false
+  compress_js: false
+  order_js:
 sass:
   sass_dir: _sass
 
