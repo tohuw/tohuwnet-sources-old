@@ -5,6 +5,7 @@ gem 'coffee-script', '>= 2.3.0'
 gem 'therubyracer', '>= 0.12.2'
 group :jekyll_plugins do
   gem 'jekyll-auto-image', '>= 1.0.1'
+  gem 'jekyll-compass', '>= 1.2.0'
   gem 'jekyll-redirect-from', '>= 0.6.2'
   gem 'jekyll-smartify', '>= 0.0.3'
   gem 'jekyll-tagging', '>= 1.0.1'
