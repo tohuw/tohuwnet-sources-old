@@ -305,6 +305,7 @@ DEPENDENCIES
   rubocop (>= 0.15.0)
   scss_lint (>= 0.33.0)
   therubyracer (>= 0.12.2)
+  titlecase (>= 0.1.1)
 
 BUNDLED WITH
    1.10.6
