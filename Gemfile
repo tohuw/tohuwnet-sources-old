@@ -31,6 +31,7 @@ group :jekyll_plugins do
   gem 'octopress-pullquote-tag', '>= 1.0.1'
   gem 'octopress-quote-tag', '>= 1.0.4'
   gem 'octopress-video-tag', '>= 1.1.1'
+  gem 'titlecase', '>= 0.1.1'
 end
 group :css do
   gem 'compass', '>= 1.0.3'
