@@ -22,7 +22,7 @@ jQuery(function() {
   });
 
   // Event when the form is submitted
-  $("#site_search").submit(function(){
+  $("#search_form").submit(function(){
       event.preventDefault();
       var query = $("#search_box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search
@@ -55,3 +55,22 @@ jQuery(function() {
     });
   }
 });
+
+// Search Form Effects
+var searchPlaceholder = $('#tipue_search_input').attr("placeholder")
+
+$('#tipue_search_input')
+    .focus(function() {
+        if (!($(this).attr("placeholder") == searchPlaceholder) && $(this).attr("class").indexOf("resultspage") < 0) {
+            $(this).attr("placeholder", searchPlaceholder);
+        };
+    })
+    .mouseenter(function() {
+        $(this).focus();
+    })
+    .blur(function() {
+        if ($(this).attr("class").indexOf("resultspage") == -1) {
+            $(this).val("");
+            $(this).attr("placeholder", "\uf002");
+        }
+    });
