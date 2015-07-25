@@ -24,7 +24,6 @@ group :jekyll_plugins do
   gem 'octopress-gist', '>= 1.3.5'
   gem 'octopress-image-tag', '>= 1.1.0'
   gem 'octopress-ink', '>= 1.1.4'
-  gem 'octopress-linkblog', '>= 2.0.2'
   gem 'octopress-littlefoot', '>= 1.0.2'
   gem 'octopress-markdown-tag', '>= 1.1.2'
   gem 'octopress-minify-html', '>= 1.3.0'
