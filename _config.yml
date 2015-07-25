@@ -9,6 +9,13 @@ baseurl: ""
 url: "https://tohuw.net"
 timezone: America/New_York
 
+# Metadata
+language: en
+author: Ron Scott-Adams
+subtitle: Elucidating Systems Architecture, Operations, & Yak Shaving
+license_title: "CC BY-NC-SA 4.0"
+license_url: https://tohuw.net/rights/
+
 # Taxonomy
 permalink: /posts/:title
 paginate_path: /page/:num/
@@ -31,7 +38,9 @@ draft_template: draft
 titlecase: true
 
 # Build settings
-exclude: [vendor]
+exclude:
+  - vendor
+  - README.md
 markdown: kramdown
 minify_html: false
 html_press:
@@ -51,11 +60,31 @@ asset_pipeline:
 sass:
   sass_dir: _sass
 
+# google_analytics:
+# gosquared_sitename:
+# piwik_url: https://tohuw.net/stats
+# piwik_siteid: 1
+
+# Layout
+recentposts_display: true
+recentposts_title: More, Here
+recentposts_count: 3
+license_display: true
+readtime_display: true
+readtime_title: icon
+
+# Search
+lunr_search:
+ excludes: [rss.xml, atom.xml]
+ stopwords: "stopwords.txt"
+ min_length: 3
+ js_dir: "javascripts"
+
 # Categories
 category_archive:
-    layout: category_archive
-    path: topic
-    slugify: true
+  layout: category_archive
+  path: topic
+  slugify: true
 
 # Tags
 tag_page_layout: tag_page
@@ -63,16 +92,46 @@ tag_page_dir: tag
 tag_permalink_style: pretty
 ignored_tags:
 
+# Search
+search_enabled: true
+search_placeholder: Search... (type & press enter)
+search_results_count: 10
+
 # Social
+# social_title:
+rss_title: icon
+twitter_title: icon
 twitter_username: tohuw
-github_username: tohuw
-linkin_username: tohuw
+linkedin_title: icon
+linkedin_username: tohuw
+github_title: icon
+github_username:  tohuw
+facebook_title: icon
 facebook_username: tohuw
 buffer_access_token: 1/f404ae874af89c3f8941128118921350
 buffer_twitter_profile: true
 buffer_facebook_profile: true
 buffer_linkedin_profile: true
 disqus_shortname: tohuw
+
+# Blogroll
+blogroll_title: More, Elsewhere
+blogroll:
+    - name: HighExecutive.Net
+      subtitle: Ruminations of my illustrious wife
+      link: http://highexecutive.net
+    - name: UberMarianne.com
+      subtitle: My Sister-In-Law Introspects
+      link: http://ubermarianne.net
+    - name: Dadhacker
+      subtitle: Cantankerous and full of good stories
+      link: http://dadhacker.com
+    - name: Punching Clouds
+      subtitle: A practical and interesting virtualization blog
+      link: http://punchingclouds.com
+    - name: Cormac Hogan
+      subtitle: Virtualization and storage at a comprehenisble depth
+      link: http://cormachogan.com
 
 # Linkblog
 linkblog:
@@ -86,10 +145,3 @@ linkblog:
   titlecase: true
   unorphan: true
   permalink_label: Permalink
-
-# Search
-lunr_search:
- excludes: [rss.xml, atom.xml]
- stopwords: "stopwords.txt"
- min_length: 3
- js_dir: "javascripts"
