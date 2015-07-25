@@ -31,7 +31,7 @@ draft_template: draft
 titlecase: true
 
 # Build settings
-exclude: []
+exclude: [vendor]
 markdown: kramdown
 minify_html: false
 html_press:
