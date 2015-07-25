@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
@@ -14,7 +13,9 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        {% include disqus_count.html %}
+        {% if site.disqus_shortname %}
+          {% include disqus_count.html %}
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
