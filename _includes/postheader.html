@@ -32,15 +32,12 @@
 
     {% if site.readtime_display %}
       <li class="readtime" title"Estimated reading time">
-        {% capture readtime %}
-          {% if content %}
-            {{ content | reading_time }}
-          {% else %}
-            {{ post.content | reading_time }}
-          {% endif %}
-        {% endcapture %}
-        {% if readtime == 0 %} less than a minute {% endif %}
-        about {{ readtime | apnumber }} minute{% if readtime != "1" %}s{% endif %}
+        {% if content %}
+          {% assign readtime = content | reading_time %}
+        {% else if post.content %}
+          {% assign readtime = post.content | reading_time %}
+        {% endif %}
+        about {{ readtime | apnumber }} minute{% if readtime != '1' %}s{% endif %}
       </li>
     {% endif %}
   </ul>
