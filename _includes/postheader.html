@@ -2,20 +2,20 @@
   <h1 class="post-title">
     {% if post.title %}
       {{ post.title }}
-    {% else if page.title %}
+    {% elsif page.title %}
       {{ page.title }}
     {% endif %}
   </h1>
   <ul class="post-meta">
     {% if post.date %}
       <li>{{ post.date | date: "%B %-d, %Y" }}</li>
-    {% else if page.date %}
+    {% elsif page.date %}
       <li>{{ page.date | date: "%B %-d, %Y" }}</li>
     {% endif %}
 
     {% if post.updated %}
       <li>Updated: {{ post.date_time_updated_html | timeago }}</li>
-    {% else if page.updated %}
+    {% elsif page.updated %}
       <li>Updated: {{ page.date_time_updated_html | timeago }}</li>
     {% endif %}
 
@@ -34,10 +34,10 @@
       <li class="readtime" title"Estimated reading time">
         {% if content %}
           {% assign readtime = content | reading_time %}
-        {% else if post.content %}
+        {% elsif post.content %}
           {% assign readtime = post.content | reading_time %}
         {% endif %}
-        about {{ readtime | apnumber }} minute{% if readtime != '1' %}s{% endif %}
+        about {{ readtime | apnumber }} minute{% unless readtime == 1 %}s{% endunless %}
       </li>
     {% endif %}
   </ul>
