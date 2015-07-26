@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% for post in site.posts limit:1 %}
+  {% include postheader.html %}
+
+  <article class="post-content">
+    {{ post.content }}
+  </article>
+
+  {% include postfooter.html %}
+{% endfor %}
