@@ -1,0 +1,23 @@
+<footer class="post-footer">
+  {% if page.tags %}
+    <ul class="tags">
+      {% for tag in page.tags %}
+        <li><a href="{{ site.url}}/{{ site.tag_page_dir}}/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% for post in site.related_posts limit:4 %}
+    {% if post.thumbnail_image %}
+      <a href="{{ post.url }}" style="background-image: url({{ post.thumbnail_image }})" alt="{{ post.title }}" class="thumbnail"></a>
+    {% else %}
+      {{ post.content | thumbnail_url: post.url, post.title }}
+    {% endif %}
+  {% endfor %}
+
+  {% if page.comments %}
+    {% capture permalink %}{{ site.url }}{{ page.url }}{% endcapture %}
+    Discuss on Twitter: <a href="https://twitter.com/share" class="twitter-share-button" data-via="Tohuw" data-size="default" data-dnt="true">Share on Twitter</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    {% include disqus_embed.html %}
+  {% endif %}
+</footer>

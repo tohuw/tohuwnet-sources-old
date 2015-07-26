@@ -1,0 +1,47 @@
+<header class="post-header">
+  <h1 class="post-title">
+    {% if post.title %}
+      {{ post.title }}
+    {% else if page.title %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+  <ul class="post-meta">
+    {% if post.date %}
+      <li>{{ post.date | date: "%b %-d, %Y" }}</li>
+    {% else if page.date %}
+      <li>{{ page.date | date: "%b %-d, %Y" }}</li>
+    {% endif %}
+
+    {% if post.updated %}
+      <li>Updated: {{ post.date_time_updated_html | timeago }}</li>
+    {% else if page.updated %}
+      <li>Updated: {{ page.date_time_updated_html | timeago }}</li>
+    {% endif %}
+
+    {% if site.categories_display and page.categories %}
+      <li>Topics:
+        {% for category in page.categories %}
+          {% categorylink category %}{{ category }}{% endcategorylink %}
+          {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </li>
+    {% endif %}
+
+    {% if page.meta %} <li>{{ page.meta }}</li> {% endif %}
+
+    {% if site.readtime_display %}
+      <li class="readtime" title"Estimated reading time">
+        {% capture readtime %}
+          {% if content %}
+            {{ content | reading_time }}
+          {% else %}
+            {{ post.content | reading_time }}
+          {% endif %}
+        {% endcapture %}
+        {% if readtime == 0 %} less than a minute {% endif %}
+        about {{ readtime | apnumber }} minute{% if readtime != "1" %}s{% endif %}
+      </li>
+    {% endif %}
+  </ul>
+</header>

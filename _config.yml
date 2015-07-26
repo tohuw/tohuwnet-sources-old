@@ -17,7 +17,7 @@ license_title: "CC BY-NC-SA 4.0"
 license_url: https://tohuw.net/rights/
 
 # Taxonomy
-permalink: /posts/:title
+permalink: /articles/:title
 paginate_path: /page/:num/
 
 # Default extension for new posts and pages
@@ -42,18 +42,18 @@ exclude:
   - vendor
   - README.md
 markdown: kramdown
-minify_html: false
+minify_html: true
 html_press:
   unquoted_attributes: false
   drop_empty_values: false
   strip_crlf: false
   js_minifier_options: false
 asset_pipeline:
-  stylesheets_dir: 'stylesheets'
-  combine_css: true
-  compress_css: true
+  stylesheets_dir: 'css'
+  combine_css: false
+  compress_css: false
   order_css: []
-  javascripts_dir: 'javascripts'
+  javascripts_dir: 'js'
   combine_js: true
   compress_js: true
   order_js: []
@@ -66,6 +66,7 @@ sass:
 # piwik_siteid: 1
 
 # Layout
+categories_display: false
 recentposts_display: true
 recentposts_title: More, Here
 recentposts_count: 3
@@ -80,7 +81,7 @@ lunr_search:
  excludes: [rss.xml, atom.xml]
  stopwords: "stopwords.txt"
  min_length: 3
- js_dir: "javascripts"
+ js_dir: "js"
 
 # Categories
 category_archive:
@@ -95,7 +96,7 @@ tag_permalink_style: pretty
 ignored_tags:
 
 # Social
-# social_title:
+social_title:
 rss_title: icon
 twitter_title: icon
 twitter_username: tohuw

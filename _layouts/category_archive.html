@@ -1,15 +1,10 @@
 ---
 layout: default
 ---
-<div class="category-archive">
-  <div>
-    <span class="title">Posts about {{ page.category }}</span>
-  </div>
-  <div>
-    <ul>
-      {{ content }}
-    </ul>
-  </div>
-</div>
+<h1 class="title">Articles about {{ page.category }}</span>
+
+<ul>
+  {{ content }}
+</ul>
 
 {% include disqus_count.html %}

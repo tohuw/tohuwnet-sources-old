@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  {% if site.recentposts_display %}
+    <h2>{{ site.recentposts_title }}</h2>
+    <ul class="post-list">
+      {% for post in site.posts | limit: {{ site.recentposts_count }} %}
+        <!-- If displaying from the index page, don't list the most recent post, because it's already being displayed -->
+        {% unless forloop.first and page.url == "/index.html" %}
+          <!-- Make sure the post listed isn't the one being displayed on the current page -->
+          {% if post.url != page.url %}
+            <li>
+              <h3><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+              {% if site.disqus_shortname %} {% include disqus_count.html %} {% endif %}
+            </li>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</footer>
