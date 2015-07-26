@@ -77,11 +77,6 @@ readtime_title: icon
 # Search
 search_enabled: true
 search_placeholder: Search...
-lunr_search:
- excludes: [rss.xml, atom.xml]
- stopwords: "stopwords.txt"
- min_length: 3
- js_dir: "js"
 
 # Categories
 category_archive:
@@ -106,10 +101,6 @@ github_title: icon
 github_username:  tohuw
 facebook_title: icon
 facebook_username: tohuw
-buffer_access_token: 1/f404ae874af89c3f8941128118921350
-buffer_twitter_profile: true
-buffer_facebook_profile: true
-buffer_linkedin_profile: true
 disqus_shortname: tohuw
 
 # Blogroll

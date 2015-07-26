@@ -10,8 +10,4 @@ thumbnail_image:
 comments: true
 redirect_from:
 redirect_to:
-twitter_text:
-facebook_text:
-linkedin_text:
-exclude_from_search: false
 ---
