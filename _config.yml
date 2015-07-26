@@ -74,6 +74,8 @@ readtime_display: true
 readtime_title: icon
 
 # Search
+search_enabled: true
+search_placeholder: Search...
 lunr_search:
  excludes: [rss.xml, atom.xml]
  stopwords: "stopwords.txt"
@@ -91,11 +93,6 @@ tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
 ignored_tags:
-
-# Search
-search_enabled: true
-search_placeholder: Search... (type & press enter)
-search_results_count: 10
 
 # Social
 # social_title:

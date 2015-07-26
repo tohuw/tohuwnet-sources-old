@@ -5,7 +5,7 @@ jQuery(function() {
     this.field('id');
     this.field('title', { boost: 10 });
     this.field('categories', { boost: 5 });
-    this.field('tags', { boost: 4 });
+    this.field('tags', { boost: 5 });
     this.field('content');
   });
 
@@ -56,21 +56,10 @@ jQuery(function() {
   }
 });
 
-// Search Form Effects
-var searchPlaceholder = $('#tipue_search_input').attr("placeholder")
-
-$('#tipue_search_input')
-    .focus(function() {
-        if (!($(this).attr("placeholder") == searchPlaceholder) && $(this).attr("class").indexOf("resultspage") < 0) {
-            $(this).attr("placeholder", searchPlaceholder);
-        };
-    })
-    .mouseenter(function() {
-        $(this).focus();
-    })
-    .blur(function() {
-        if ($(this).attr("class").indexOf("resultspage") == -1) {
-            $(this).val("");
-            $(this).attr("placeholder", "\uf002");
+// Submit the form automatically if at least 3 characters are entered
+$('input#search_box')
+    .on('input', function() {
+        if ($('input#search_box').val().length > 2) {
+            $('input#search_box').submit();
         }
     });
