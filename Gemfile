@@ -28,6 +28,7 @@ group :jekyll_plugins do
   gem 'octopress-minify-html', '>= 1.3.0'
   gem 'octopress-pullquote-tag', '>= 1.0.1'
   gem 'octopress-quote-tag', '>= 1.0.4'
+  gem 'octopress-solarized', '>= 1.1.2'
   gem 'octopress-video-tag', '>= 1.1.1'
 end
 group :css do

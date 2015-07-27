@@ -52,7 +52,7 @@ html_press:
   strip_crlf: false
   js_minifier_options: false
 asset_pipeline:
-  stylesheets_dir: 'stylesheets'
+  stylesheets_source: 'stylesheets'
   stylesheets_destination: 'stylesheets'
   combine_css: true
   compress_css: false
@@ -60,7 +60,7 @@ asset_pipeline:
     - normalize.css
     - h5bp.css
     - main.scss
-  javascripts_dir: 'javascripts'
+  javascripts_source: 'javascripts'
   javascripts_destination: 'javascripts'
   combine_js: true
   compress_js: false
@@ -80,7 +80,7 @@ sass:
 
 # Search
 search_enabled: true
-search_placeholder: Search...
+search_placeholder: "&#xf002;"
 
 # Categories
 categories_display: false
