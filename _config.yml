@@ -63,7 +63,7 @@ asset_pipeline:
   javascripts_dir: 'javascripts'
   javascripts_destination: 'javascripts'
   combine_js: true
-  compress_js: true
+  compress_js: false
   order_js:
     - jquery-1.11.3.min.js
     - modernizr-2.8.3.min.js
