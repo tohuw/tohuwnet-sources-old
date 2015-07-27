@@ -6,8 +6,7 @@
   "bourbon/bourbon",
   "base/base",
   "neat/neat",
-  "fontawesome/font-awesome",
-  "syntax-highlighting"
+  "fontawesome/font-awesome"
 ;
 
 $fonts_dir: "../fonts" !default;
@@ -59,8 +58,9 @@ header.site-header {
     font-size: 1.5rem;
 
     input {
+      @include span-columns(2 of 3);
+      @include shift(.75);
       margin-top: 1.3rem;
-      width: 24rem;
       border: 0;
       border-bottom: 2px solid $subtle;
       padding: .2rem;
