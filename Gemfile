@@ -31,7 +31,6 @@ group :jekyll_plugins do
   gem 'octopress-video-tag', '>= 1.1.1'
 end
 group :css do
-  gem 'font-awesome-sass', '>= 4.3.0'
   gem 'bourbon', '>= 4.2.3'
   gem 'neat', '>= 1.7.2'
   gem 'bitters', '>= 1.0.0'

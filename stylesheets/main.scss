@@ -6,5 +6,31 @@
   "bourbon/bourbon",
   "base/base",
   "neat/neat",
+  "fontawesome/font-awesome",
   "syntax-highlighting"
 ;
+
+$fonts_dir: "../fonts" !default;
+
+@include font-face("MavenPro Regular", "#{$fonts_dir}/mavenpro/maven_pro_regular-webfont", $file-formats: eot svg ttf woff);
+@include font-face("MavenPro Medium", "#{$fonts_dir}/mavenpro/maven_pro_medium-webfont", $file-formats: eot svg ttf woff);
+@include font-face("MavenPro Bold", "#{$fonts_dir}/mavenpro/maven_pro_bold-webfont", $file-formats: eot svg ttf woff);
+@include font-face("MavenPro Black", "#{$fonts_dir}/mavenpro/maven_pro_black-webfont", $file-formats: eot svg ttf woff);
+
+body {
+  margin: 1rem;
+  font-family: "MavenPro Medium";
+}
+
+// Footer
+div.footer-asides {
+  @include outer-container;
+
+  aside.recentposts {
+    @include span-columns(7);
+  }
+
+  aside.blogroll {
+    @include span-columns(5);
+  }
+}

@@ -53,6 +53,7 @@ html_press:
   js_minifier_options: false
 asset_pipeline:
   stylesheets_dir: 'stylesheets'
+  stylesheets_destination: 'stylesheets'
   combine_css: true
   compress_css: false
   order_css:
@@ -60,6 +61,7 @@ asset_pipeline:
     - h5bp.css
     - main.scss
   javascripts_dir: 'javascripts'
+  javascripts_destination: 'javascripts'
   combine_js: true
   compress_js: true
   order_js:

@@ -1,42 +1,41 @@
 <footer class="site-footer">
-  {% if site.recentposts_display %}
-    <aside class="recentposts">
-      {% if site.recentposts_title %}<h2>{{ site.recentposts_title }}</h2>{% endif %}
-      <ul class="post-list">
-        {% for post in site.posts | limit: {{ site.recentposts_count }} %}
-          <!-- If displaying from the index page, don't list the most recent post, because it's already being displayed -->
-          {% unless forloop.first and page.url == "/index.html" %}
-            <!-- Make sure the post listed isn't the one being displayed on the current page -->
-            {% if post.url != page.url %}
-              <li>
-                <h3><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-                {% if site.disqus_shortname %} {% include disqus_count.html %} {% endif %}
-              </li>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
-          <li><a class="readmore" href="{{ site.baseurl }}articles.html">More...</a></li>
-      </ul>
-    </aside>
-  {% endif %}
+  <div class="footer-asides">
+    {% if site.recentposts_display %}
+      <aside class="recentposts">
+        {% if site.recentposts_title %}<h2>{{ site.recentposts_title }}</h2>{% endif %}
+        <ul class="post-list">
+          {% for post in site.posts | limit: {{ site.recentposts_count }} %}
+            <!-- If displaying from the index page, don't list the most recent post, because it's already being displayed -->
+            {% unless forloop.first and page.url == "/index.html" %}
+              <!-- Make sure the post listed isn't the one being displayed on the current page -->
+              {% if post.url != page.url %}
+                <li>
+                  <h3><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                  {% if site.disqus_shortname %} {% include disqus_count.html %} {% endif %}
+                </li>
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+            <li><a class="readmore" href="{{ site.baseurl }}articles.html">More...</a></li>
+        </ul>
+      </aside>
+    {% endif %}
 
-  {% if site.blogroll %}
-    <aside class="blogroll">
-      {% if site.blogroll_title %}<h2>{{ site.blogroll_title }}</h2>{% endif %}
-      <ul class="blogroll-list">
-        {% for link in site.blogroll %}
-          <li><a href="{{ link.url }}">{{ link.name }}</a>{% if link.subtitle %} - {{ link.subtitle }}{% endif %}</li>
-        {% endfor %}
-      </ul>
-    </aside>
-  {% endif %}
-
-  <div class="site-meta">
-    <p class="site-info">
-      powered by <a href="http://jekyllrb.com">Jeykll</a>, <a href="http://octopress.org">Octopress</a>, and <a href="#">Imprimatur</a>
-      {% if site.license_display %}
-        // content is <a href="{{ site.license_url }}">{{ site.license_title }}</a>
-      {% endif %}
-    </p>
+    {% if site.blogroll %}
+      <aside class="blogroll">
+        {% if site.blogroll_title %}<h2>{{ site.blogroll_title }}</h2>{% endif %}
+        <ul class="blogroll-list">
+          {% for link in site.blogroll %}
+            <li><a href="{{ link.url }}">{{ link.name }}</a>{% if link.subtitle %} - {{ link.subtitle }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </aside>
+    {% endif %}
   </div>
+  <p class="site-info">
+    powered by <a href="http://jekyllrb.com">Jeykll</a>, <a href="http://octopress.org">Octopress</a>, and <a href="#">Imprimatur</a>
+    {% if site.license_display %}
+      // content is <a href="{{ site.license_url }}">{{ site.license_title }}</a>
+    {% endif %}
+  </p>
 </footer>
