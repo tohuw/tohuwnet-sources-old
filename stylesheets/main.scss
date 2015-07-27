@@ -26,17 +26,24 @@ body {
 
 // Site Header
 header.site-header {
-  @include outer-container;
+  @include outer-container(100%);
+  padding: .5rem 0;
   background-color: $backdrop;
+
+  * {
+    margin-bottom: 0;
+  }
 
   h1.site-title {
     @include span-columns(3);
+    text-align: center;
     font-size: 2.8rem;
   }
 
   nav.site-nav {
     @include span-columns(6);
     margin-top: .8rem;
+    text-align: center;
     font-size: 2rem;
 
     ul, li {
@@ -58,6 +65,20 @@ header.site-header {
       border-bottom: 2px solid $subtle;
       padding: .2rem;
     }
+  }
+}
+
+// Content
+div.mainbody {
+  @include span-columns(10);
+  @include shift(1);
+
+  p {
+    clear: left;
+  }
+
+  figure.code-highlight-figure {
+    @include span-columns(8);
   }
 }
 
