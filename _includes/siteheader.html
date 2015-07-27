@@ -2,11 +2,14 @@
   <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
 
   <nav class="site-nav">
-    {% for page in site.pages %}
-      {% if page.menuitem and page.title %}
-      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-      {% endif %}
-    {% endfor %}
+    <ul>
+      <li><a class="page-link" href="{{ site.baseurl }}articles.html">Articles</a></li>
+      {% for page in site.pages %}
+        {% if page.menuitem and page.title %}
+          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
   </nav>
 
   {% include search_form.html %}

@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Ron Scott-Adams -- Dev -- @Tohuw
+
+# THANKS
+
+    Jekyll
+    Octopress
+    Thoughtbot
+
+# TECHNOLOGY COLOPHON
+
+    Jekyll + Octopress
+    Sass + Bourbon, CSS3, H5BP + HTML5
+    jQuery, Modernizr, Normalize.css

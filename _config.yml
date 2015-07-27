@@ -13,6 +13,9 @@ timezone: America/New_York
 language: en
 author: Ron Scott-Adams
 subtitle: Architecting IT Systems, Operating Blinkenlights, Shaving Yaks
+
+# License
+license_display: true
 license_title: "CC BY-NC-SA 4.0"
 license_url: https://tohuw.net/rights/
 
@@ -49,14 +52,22 @@ html_press:
   strip_crlf: false
   js_minifier_options: false
 asset_pipeline:
-  stylesheets_dir: 'css'
-  combine_css: false
+  stylesheets_dir: 'stylesheets'
+  combine_css: true
   compress_css: false
-  order_css: []
-  javascripts_dir: 'js'
+  order_css:
+    - normalize.css
+    - h5bp.css
+    - main.scss
+  javascripts_dir: 'javascripts'
   combine_js: true
   compress_js: true
-  order_js: []
+  order_js:
+    - jquery-1.11.3.min.js
+    - modernizr-2.8.3.min.js
+    - lunr.js
+    - plugins.js
+    - main.js
 sass:
   sass_dir: _sass
 
@@ -65,20 +76,12 @@ sass:
 # piwik_url: https://tohuw.net/stats
 # piwik_siteid: 1
 
-# Layout
-categories_display: false
-recentposts_display: true
-recentposts_title: More, Here
-recentposts_count: 3
-license_display: true
-readtime_display: true
-readtime_title: icon
-
 # Search
 search_enabled: true
 search_placeholder: Search...
 
 # Categories
+categories_display: false
 category_archive:
   layout: category_archive
   path: topic
@@ -103,24 +106,29 @@ facebook_title: icon
 facebook_username: tohuw
 disqus_shortname: tohuw
 
+# Recent Posts List
+recentposts_display: true
+recentposts_title: More, Here
+recentposts_count: 3
+
 # Blogroll
 blogroll_title: More, Elsewhere
 blogroll:
     - name: HighExecutive.Net
       subtitle: Ruminations of my illustrious wife
-      link: http://highexecutive.net
+      url: http://highexecutive.net
     - name: UberMarianne.com
       subtitle: My Sister-In-Law Introspects
-      link: http://ubermarianne.net
+      url: http://ubermarianne.net
     - name: Dadhacker
       subtitle: Cantankerous and full of good stories
-      link: http://dadhacker.com
+      url: http://dadhacker.com
     - name: Punching Clouds
       subtitle: A practical and interesting virtualization blog
-      link: http://punchingclouds.com
+      url: http://punchingclouds.com
     - name: Cormac Hogan
       subtitle: Virtualization and storage at a comprehenisble depth
-      link: http://cormachogan.com
+      url: http://cormachogan.com
 
 # Linkblog
 linkblog:
@@ -134,3 +142,7 @@ linkblog:
   titlecase: true
   unorphan: true
   permalink_label: Permalink
+
+  # Readtime
+  readtime_display: true
+  readtime_title: icon

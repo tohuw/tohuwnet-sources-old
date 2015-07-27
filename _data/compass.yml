@@ -1,7 +1,0 @@
----
-require:
-- jekyll-compass
-css_dir: css
-sass_dir: _sass
-images_dir: i
-javascripts_dir: js

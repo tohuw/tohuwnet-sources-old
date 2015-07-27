@@ -3,7 +3,6 @@ layout: {{ layout }}
 title: "{{ title }}"
 date: {{ date }}
 date_updated:
-categories:
 tags:
 image:
 thumbnail_image:
