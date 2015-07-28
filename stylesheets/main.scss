@@ -10,24 +10,17 @@
 ;
 
 $fonts_dir: "../fonts" !default;
-$backdrop: #ddd;
-$subtle: #ededed;
 
 @include font-face("MavenPro", "#{$fonts_dir}/mavenpro/maven_pro_regular-webfont", $file-formats: eot svg ttf woff);
-@include font-face("MavenPro", "#{$fonts_dir}/mavenpro/maven_pro_medium-webfont", normal, italic, $file-formats: eot svg ttf woff);
 @include font-face("MavenPro", "#{$fonts_dir}/mavenpro/maven_pro_bold-webfont", bold, $file-formats: eot svg ttf woff);
+@include font-face("MavenPro Medium", "#{$fonts_dir}/mavenpro/maven_pro_medium-webfont", $file-formats: eot svg ttf woff);
 @include font-face("MavenPro Black", "#{$fonts_dir}/mavenpro/maven_pro_black-webfont", $file-formats: eot svg ttf woff);
-
-body {
-  font-family: "MavenPro";
-  font-size: 16px;
-}
 
 // Site Header
 header.site-header {
   @include outer-container(100%);
   padding: .5rem 0;
-  background-color: $backdrop;
+  background-color: $light-gray;
 
   * {
     margin-bottom: 0;
@@ -41,7 +34,7 @@ header.site-header {
 
   nav.site-nav {
     @include span-columns(6);
-    margin-top: .8rem;
+    margin-top: .6rem;
     text-align: center;
     font-size: 2rem;
 
@@ -49,7 +42,12 @@ header.site-header {
       display: inline-block;
     }
     li {
-      margin-right: 1rem;
+      margin-right: 2rem;
+
+      a {
+        border-bottom: 1px solid $blue;
+        text-transform: lowercase;
+      }
     }
   }
 
@@ -62,8 +60,18 @@ header.site-header {
       @include shift(.75);
       margin-top: 1.3rem;
       border: 0;
-      border-bottom: 2px solid $subtle;
       padding: .2rem;
+    }
+
+    ul {
+      @include span-columns(2 of 3);
+      @include shift(.75);
+      background-color: adjust-color($light-gray, $lightness: -5%, $alpha: -0.5);
+
+      li {
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+      }
     }
   }
 }
