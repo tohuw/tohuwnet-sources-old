@@ -6,6 +6,7 @@
   "bourbon/bourbon",
   "base/base",
   "neat/neat",
+  "palette",
   "fontawesome/font-awesome"
 ;
 
@@ -21,7 +22,7 @@ header.site-header {
   @include outer-container(100%);
   @include border-bottom-radius(6rem);
   padding: .5rem 0;
-  background-color: $light-gray;
+  background-color: $md-blue-500;
 
   * {
     margin-bottom: 0;
@@ -53,7 +54,6 @@ header.site-header {
     text-align: center;
 
     nav.site-nav {
-      margin-top: .6rem;
       font-size: 2rem;
 
       a {
@@ -75,7 +75,6 @@ header.site-header {
     input {
       @include span-columns(3 of 4);
       @include shift(.5);
-      margin-top: 1.3rem;
       border: 0;
       padding: .2rem;
     }
