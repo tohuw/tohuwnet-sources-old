@@ -1,52 +1,51 @@
 // Typography
-$base-font-family: 'MavenPro';
+$base-font-family:    'MavenPro';
 $heading-font-family: 'MavenPro Medium';
 
 // Font Sizes
 $base-font-size: 1vw;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height:    1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
+$base-spacing:       $base-line-height * 1em;
+$small-spacing:      $base-spacing / 2;
+$base-z-index:       0;
 
 // Scheme Choices
 // Pick "light" or "dark" for the scheme.
 // For the other colors, try http://www.materialpalette.com
-$scheme: light;
-$primary-color: color(blue);
-$primary-light-color: color(blue, lighten-2);
-$primary-dark-color: color(blue, darken-3);
-$accent-color: color(pink, accent-2);
+$primary-scheme:              light;
+$primary-color:               color(blue);
+$primary-light-color:         color(blue, lighten-2);
+$primary-dark-color:          color(blue, darken-3);
+$accent-color:                color(pink, accent-2);
+$base-text-on-primary-scheme: light;
+$base-text-on-accent-scheme:  light;
 
 // Scheme Definitions
 $base-background-color: color(white);
-$base-text-color: color(black);
-$base-font-color: adjust-color($base-text-color, $alpha: .87);
-$secondary-font-color: adjust-color($base-text-color, $alpha: .54);
-$icon-font-color: $secondary-font-color;
-$hint-font-color: adjust-color($base-text-color, $alpha: .26);
-$disabled-font-color: $hint-font-color;
-$divider-color: adjust-color($base-text-color, $alpha: .12);
-$action-color: $primary-color;
+$base-text-color:       color(black);
+$base-font-color:       adjust-color($base-text-color, $alpha: .87);
+$secondary-font-color:  adjust-color($base-text-color, $alpha: .54);
+$hint-font-color:       adjust-color($base-text-color, $alpha: .26);
 
-@if $scheme == dark {
+@if $primary-scheme == dark {
   $base-background-color: color(black);
-  $base-text-color: color(white);
-  $base-font-color: $base-text-color;
-  $secondary-font-color: adjust-color($base-text-color, $alpha: .7);
-  $icon-font-color: $secondary-font-color;
-  $hint-font-color: adjust-color($base-text-color, $alpha: .3);
-  $disabled-font-color: $hint-font-color;
-  $divider-color: adjust-color($base-text-color, $alpha: .12);
-  $action-color: $primary-color;
+  $base-text-color:       color(white);
+  $base-font-color:       $base-text-color;
+  $secondary-font-color:  adjust-color($base-text-color, $alpha: .7);
+  $hint-font-color:       adjust-color($base-text-color, $alpha: .3);
 }
+
+$icon-font-color:       $secondary-font-color;
+$disabled-font-color:   $hint-font-color;
+$divider-color:         adjust-color($base-text-color, $alpha: .12),
+$action-color:          $primary-color
 
 // Border
 $base-border-color: $divider-color;
-$base-border: 1px solid $base-border-color;
+$base-border:       1px solid $base-border-color;

@@ -321,6 +321,14 @@ $colors: (
   )
 );
 
+$light-text: (
+  alphas: (
+    "primary": .87,
+    "secondary": .54,
+    "hint": .26
+  )
+)
+
 // Function to easily call colors
 // Credit: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 @function color($color, $variant: 'base') {
