@@ -3,7 +3,7 @@ $base-font-family: 'MavenPro';
 $heading-font-family: 'MavenPro Medium';
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 1vw;
 
 // Line height
 $base-line-height: 1.5;
@@ -15,21 +15,38 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
-// Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+// Scheme Choices
+// Pick "light" or "dark" for the scheme.
+// For the other colors, try http://www.materialpalette.com
+$scheme: light;
+$primary-color: color(blue);
+$primary-light-color: color(blue, lighten-2);
+$primary-dark-color: color(blue, darken-3);
+$accent-color: color(pink, accent-2);
 
-// Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+// Scheme Definitions
+$base-background-color: color(white);
+$base-text-color: color(black);
+$base-font-color: adjust-color($base-text-color, $alpha: .87);
+$secondary-font-color: adjust-color($base-text-color, $alpha: .54);
+$icon-font-color: $secondary-font-color;
+$hint-font-color: adjust-color($base-text-color, $alpha: .26);
+$disabled-font-color: $hint-font-color;
+$divider-color: adjust-color($base-text-color, $alpha: .12);
+$action-color: $primary-color;
+
+@if $scheme == dark {
+  $base-background-color: color(black);
+  $base-text-color: color(white);
+  $base-font-color: $base-text-color;
+  $secondary-font-color: adjust-color($base-text-color, $alpha: .7);
+  $icon-font-color: $secondary-font-color;
+  $hint-font-color: adjust-color($base-text-color, $alpha: .3);
+  $disabled-font-color: $hint-font-color;
+  $divider-color: adjust-color($base-text-color, $alpha: .12);
+  $action-color: $primary-color;
+}
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $divider-color;
 $base-border: 1px solid $base-border-color;
-
-// Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);

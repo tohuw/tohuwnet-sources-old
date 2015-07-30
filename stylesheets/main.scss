@@ -7,7 +7,6 @@
   "bourbon/bourbon",
   "base/base",
   "neat/neat",
-  "palette",
   "fontawesome/font-awesome"
 ;
 
@@ -21,9 +20,8 @@ $fonts_dir: "../fonts" !default;
 // Site Header
 header.site-header {
   @include outer-container(100%);
-  @include border-bottom-radius(6rem);
   padding: .5rem 0;
-  background-color: $md-blue-500;
+  background-color: $primary-color;
 
   * {
     margin-bottom: 0;
@@ -46,7 +44,7 @@ header.site-header {
       @include shift(.5);
       font-size: 1.3rem;
       font-weight: normal;
-      color: adjust-color($medium-gray, $lightness: -20%);
+      color: $secondary-font-color;
     }
   }
 
@@ -58,7 +56,7 @@ header.site-header {
       font-size: 2rem;
 
       a {
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid $divider-color;
         text-transform: lowercase;
       }
     }
@@ -85,7 +83,7 @@ header.site-header {
       @include shift(.5);
       position: absolute;
       top: 100%;
-      background-color: adjust-color(white, $alpha: -0.2);
+      background-color: $base-text-color;
 
       li {
         padding: 0 .5rem;
