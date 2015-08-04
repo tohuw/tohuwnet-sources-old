@@ -16,36 +16,17 @@ $small-spacing:      $base-spacing / 2;
 $base-z-index:       0;
 
 // Scheme Choices
-// Pick "light" or "dark" for the scheme.
-// For the other colors, try http://www.materialpalette.com
-$primary-scheme:              light;
-$primary-color:               color(blue);
-$primary-light-color:         color(blue, lighten-2);
-$primary-dark-color:          color(blue, darken-3);
-$accent-color:                color(pink, accent-2);
-$base-text-on-primary-scheme: light;
-$base-text-on-accent-scheme:  light;
+// For the colors, try http://www.materialpalette.com
+$base-background-color:          color(white);
+$base-font-scheme:               dark;
+$primary-color:                  color(blue);
+$primary-font-scheme:            light;
+$primary-alternate1-color:       color(blue, lighten-2);
+$primary-alternate1-font-scheme: dark;
+$primary-alternate2-color:       color(blue, darken-3);
+$primary-alternate1-font-scheme: light;
+$accent-color:                   color(pink, accent-2);
+$accent-color-font-scheme:       light;
 
-// Scheme Definitions
-$base-background-color: color(white);
-$base-text-color:       color(black);
-$base-font-color:       adjust-color($base-text-color, $alpha: .87);
-$secondary-font-color:  adjust-color($base-text-color, $alpha: .54);
-$hint-font-color:       adjust-color($base-text-color, $alpha: .26);
-
-@if $primary-scheme == dark {
-  $base-background-color: color(black);
-  $base-text-color:       color(white);
-  $base-font-color:       $base-text-color;
-  $secondary-font-color:  adjust-color($base-text-color, $alpha: .7);
-  $hint-font-color:       adjust-color($base-text-color, $alpha: .3);
-}
-
-$icon-font-color:       $secondary-font-color;
-$disabled-font-color:   $hint-font-color;
-$divider-color:         adjust-color($base-text-color, $alpha: .12),
-$action-color:          $primary-color
-
-// Border
-$base-border-color: $divider-color;
-$base-border:       1px solid $base-border-color;
+$base-border-color: adjust-color(color(black), $alpha: .12);
+$base-border: 1px solid $base-border-color;
