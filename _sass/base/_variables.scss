@@ -5,7 +5,7 @@ $heading-font-family: 'MavenPro Medium';
 // Font Sizes
 $base-font-size: 1vw;
 
-// Line height
+// Line Height
 $base-line-height:    1.5;
 $heading-line-height: 1.2;
 
@@ -16,17 +16,16 @@ $small-spacing:      $base-spacing / 2;
 $base-z-index:       0;
 
 // Scheme Choices
-// For the colors, try http://www.materialpalette.com
-$base-background-color:          color(white);
-$base-font-scheme:               dark;
-$primary-color:                  color(blue);
-$primary-font-scheme:            light;
-$primary-alternate1-color:       color(blue, lighten-2);
-$primary-alternate1-font-scheme: dark;
-$primary-alternate2-color:       color(blue, darken-3);
-$primary-alternate1-font-scheme: light;
-$accent-color:                   color(pink, accent-2);
-$accent-color-font-scheme:       light;
+// For the colors, try http://www.materialpalette.com and check _palette.scss
+$base-background-color:    color(white);
+$base-font-color:          text-color(dark, primary);
+$primary-color:            color(blue);
+$primary-alternate1-color: color(blue, lighten-5);
+$primary-alternate2-color: color(blue, darken-3);
+$accent-color:             color(pink, accent-2);
+$action-color:             $primary-color;
+$action-alternate-color:   $primary-alternate1-color;
 
-$base-border-color: adjust-color(color(black), $alpha: .12);
-$base-border: 1px solid $base-border-color;
+$divider-color:     adjust-color(color(black), $alpha: .12);
+$base-border-color: $divider-color;
+$base-border:       1px solid $base-border-color;

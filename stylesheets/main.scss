@@ -22,9 +22,19 @@ header.site-header {
   @include outer-container(100%);
   padding: .5rem 0;
   background-color: $primary-color;
+  color: text-color(light);
 
   * {
     margin-bottom: 0;
+  }
+
+  a {
+    color: text-color(light);
+
+    &:hover,
+    &:active {
+      color: $primary-alternate1-color;
+    }
   }
 
   li {
@@ -44,7 +54,7 @@ header.site-header {
       @include shift(.5);
       font-size: 1.3rem;
       font-weight: normal;
-      color: $secondary-font-color;
+      color: text-color(light, secondary);
     }
   }
 
@@ -56,7 +66,7 @@ header.site-header {
       font-size: 2rem;
 
       a {
-        border-bottom: 1px solid $divider-color;
+        border-bottom: 1px solid $primary-alternate1-color;
         text-transform: lowercase;
       }
     }
@@ -83,7 +93,7 @@ header.site-header {
       @include shift(.5);
       position: absolute;
       top: 100%;
-      background-color: $base-text-color;
+      background-color: color(white);
 
       li {
         padding: 0 .5rem;

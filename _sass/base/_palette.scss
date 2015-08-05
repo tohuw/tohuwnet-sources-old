@@ -327,14 +327,13 @@ $colors: (
   @return map-get(map-get($colors, $color), $variant);
 }
 
-$text-schemes: (
+$text-colors: (
   light: (
     "primary":   color(white),
     "secondary": adjust-color(color(white), $alpha: .7),
     "icon":      adjust-color(color(white), $alpha: .7),
     "hint":      adjust-color(color(white), $alpha: .3),
-    "disabled":  adjust-color(color(white), $alpha: .7),
-    "divider":   adjust-color(color(white), $alpha: .12)
+    "disabled":  adjust-color(color(white), $alpha: .7)
   ),
 
   dark: (
@@ -342,12 +341,11 @@ $text-schemes: (
     "secondary": adjust-color(color(black), $alpha: .54),
     "icon":      adjust-color(color(black), $alpha: .54),
     "hint":      adjust-color(color(black), $alpha: .26),
-    "disabled":  adjust-color(color(black), $alpha: .26),
-    "divider":   adjust-color(color(black), $alpha: .12)
+    "disabled":  adjust-color(color(black), $alpha: .26)
   )
 );
 
 // Easily call text and frame colors by 'dark' or 'light' and the purpose
-@function element-scheme($scheme, $purpose: 'primary') {
-  @return map-get(map-get($text-schemes, $scheme), $purpose);
+@function text-color($scheme, $purpose: 'primary') {
+  @return map-get(map-get($text-colors, $scheme), $purpose);
 }
