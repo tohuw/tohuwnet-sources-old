@@ -22,18 +22,18 @@ header.site-header {
   @include outer-container(100%);
   padding: .5rem 0;
   background-color: $primary-color;
-  color: text-color(light);
+  color: text-color(dark);
 
   * {
     margin-bottom: 0;
   }
 
   a {
-    color: text-color(light);
+    color: text-color(dark);
 
     &:hover,
     &:active {
-      color: $primary-alternate1-color;
+      color: $accent-color;
     }
   }
 
@@ -43,41 +43,46 @@ header.site-header {
   }
 
   div.site-titles {
-    @include span-columns(3.5);
-    @include shift(.5);
+    text-align: center;
 
     h1.site-title {
       font-size: 2.8rem;
     }
 
     h2.site-subtitle {
-      @include shift(.5);
       font-size: 1.3rem;
       font-weight: normal;
-      color: text-color(light, secondary);
+      color: text-color(dark, secondary);
     }
   }
 
   div.site-links {
-    @include span-columns(4);
     text-align: center;
 
     nav.site-nav {
+      display: inline-block;
       font-size: 2rem;
 
       a {
-        border-bottom: 1px solid $primary-alternate1-color;
+        border-bottom: 1px solid text-color(dark, secondary);
         text-transform: lowercase;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border-bottom-color: $accent-color;
+        }
       }
     }
 
     ul.social {
+      display: inline-block;
       font-size: 2rem;
     }
   }
 
   div.search {
-    @include span-columns(4);
+    display: none;
     position: relative;
     font-size: 1.5rem;
 

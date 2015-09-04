@@ -19,12 +19,14 @@ $base-z-index:       0;
 // For the colors, try http://www.materialpalette.com and check _palette.scss
 $base-background-color:    color(white);
 $base-font-color:          text-color(dark, primary);
-$primary-color:            color(blue);
-$primary-alternate1-color: color(blue, lighten-5);
-$primary-alternate2-color: color(blue, darken-3);
-$accent-color:             color(pink, accent-2);
-$action-color:             $primary-color;
-$action-alternate-color:   $primary-alternate1-color;
+$primary-color:            color(lime, lighten-3);
+$primary-alternate1-color: color(lime, lighten-4);
+$primary-alternate2-color: color(lime, darken-2);
+$accent-color:             color(deep-orange, accent-3);
+$accent-fallback1-color:   color(deep-orange, accent-3);
+$aceent-fallback2-color:   
+$action-color:             $accent-fallback1-color;
+$action-alternate-color:   $accent-fallback2-color;
 
 $divider-color:     adjust-color(color(black), $alpha: .12);
 $base-border-color: $divider-color;
