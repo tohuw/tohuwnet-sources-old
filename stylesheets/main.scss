@@ -22,87 +22,180 @@ header.site-header {
   @include outer-container(100%);
   padding: .5rem 0;
   background-color: $primary-color;
-  color: text-color(dark);
+  color: text-color(light);
 
   * {
+    display: inline-block;
+    // vertical-align: bottom;
     margin-bottom: 0;
   }
 
   a {
-    color: text-color(dark);
-
-    &:hover,
-    &:active {
-      color: $accent-color;
-    }
+    color: $accent-fallback2-color;
   }
 
   li {
-    display: inline-block;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
-  div.site-titles {
-    text-align: center;
+  h1.site-title {
+    @include span-columns(2);
+    @include shift(1);
+    font-size: 2.8rem;
 
-    h1.site-title {
-      font-size: 2.8rem;
-    }
-
-    h2.site-subtitle {
-      font-size: 1.3rem;
-      font-weight: normal;
-      color: text-color(dark, secondary);
+    a {
+      color: inherit;
     }
   }
 
-  div.site-links {
-    text-align: center;
+  h2.site-subtitle {
+    @include span-columns(4);
+    vertical-align: text-bottom;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    font-weight: normal;
+    color: text-color(light, secondary);
+  }
 
-    nav.site-nav {
-      display: inline-block;
-      font-size: 2rem;
+  nav.site-nav {
+    @include span-columns(2);
+    @include omega();
+    text-align: right;
+    font-size: 1.8rem;
+    line-height: 4rem;
 
-      a {
-        border-bottom: 1px solid text-color(dark, secondary);
-        text-transform: lowercase;
+    a {
+      text-transform: lowercase;
+    }
+  }
 
-        &:hover,
-        &:active,
-        &:focus {
-          border-bottom-color: $accent-color;
-        }
+  ul.social {
+    @include span-columns(2);
+    @include omega();
+    text-align: right;
+    font-size: 2rem;
+    line-height: 4rem;
+
+    a {
+      color: text-color(light);
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
       }
     }
 
-    ul.social {
-      display: inline-block;
-      font-size: 2rem;
+    .fa {
+      &:hover,
+      &:active,
+      &:focus {
+        text-shadow: 1px 1px 1px color(black);
+      }
+    }
+
+    .fa-rss {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fa9d4a;
+      }
+    }
+
+    .fa-twitter {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #5ea9dd;
+      }
+    }
+
+    .fa-github {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #181617;
+      }
+    }
+
+    .fa-linkedin {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #0077b5;
+      }
     }
   }
 
   div.search {
-    display: none;
-    position: relative;
+    @include span-columns(.5);
+    @include omega();
     font-size: 1.5rem;
+    line-height: 4rem;
+    color: text-color(dark);
 
     input {
-      @include span-columns(3 of 4);
-      @include shift(.5);
+      position: relative;
       border: 0;
-      padding: .2rem;
+      background-color: transparent;
+      cursor: pointer;
+
+      @include placeholder {
+        color: text-color(light);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        @include placeholder {
+          color: $accent-fallback2-color;
+          text-shadow: 1px 1px 1px color(black);
+        }
+      }
+
+      &:focus {
+        width: 15rem;
+        @include shift(-6);
+        padding: .25rem;
+        font-family: MavenPro;
+        cursor: text;
+        background-color: $accent-fallback2-color;
+      }
+
     }
 
-    ul {
-      @include span-columns(3 of 4);
-      @include shift(.5);
+    #search_results {
+      @include shift(-1);
       position: absolute;
-      top: 100%;
-      background-color: color(white);
+      margin-top: -1rem;
+      width: 15rem;
+      padding: .5rem;
+      background-color: $accent-fallback2-color;
+      font-size: 1.2rem;
+      line-height: normal;
 
-      li {
-        padding: 0 .5rem;
-        font-size: 1.2rem;
+      &.no_results {
+        display: none;
+      }
+
+      .results_count {
+        padding-left: .25rem;
+        font-size: 1.1rem;
+        color: text-color(dark, hint);
+      }
+
+      ul {
+        margin: 1rem 0;
+
+        li {
+          padding: 0 .5rem;
+
+          a {
+            text-decoration: underline;
+            color: text-color(dark);
+          }
+        }
       }
     }
   }
@@ -112,9 +205,19 @@ header.site-header {
 div.mainbody {
   @include span-columns(10);
   @include shift(1);
+  margin-top: 2rem;
 
   p {
     clear: left;
+    font-size: 1.33rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  ul.post-meta {
+    font-size: 1.15rem;
   }
 
   figure.code-highlight-figure {

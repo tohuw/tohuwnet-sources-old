@@ -57,14 +57,18 @@ jQuery(function() {
   });
 
   function display_search_results(results) {
-    var $search_results = $("#search_results");
+    var $search_results = $("#search_results_list");
 
     // Wait for data to load
     window.data.then(function(loaded_data) {
 
       // Are there any results?
       if (results.length) {
-        $search_results.empty(); // Clear any old results
+        // Populate the results counter text
+        $(".results_count").text("\"" + $("#search_box").val() + "\": " + results.length + " results");
+
+        // Clear any old results
+        $search_results.empty();
 
         // Iterate over the results
         results.forEach(function(result) {
@@ -76,6 +80,7 @@ jQuery(function() {
           // Add it to the results
           $search_results.append(appendString);
         });
+
       } else {
         $search_results.html('<li>No results found</li>');
       }

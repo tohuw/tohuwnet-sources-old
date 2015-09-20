@@ -330,18 +330,18 @@ $colors: (
 $text-colors: (
   light: (
     "primary":   color(white),
-    "secondary": adjust-color(color(white), $alpha: .7),
-    "icon":      adjust-color(color(white), $alpha: .7),
-    "hint":      adjust-color(color(white), $alpha: .3),
-    "disabled":  adjust-color(color(white), $alpha: .7)
+    "secondary": adjust-color(color(white), $alpha: -.3),
+    "icon":      adjust-color(color(white), $alpha: -.7),
+    "hint":      adjust-color(color(white), $alpha: -.7),
+    "disabled":  adjust-color(color(white), $alpha: -.7)
   ),
 
   dark: (
-    "primary":   adjust-color(color(black), $alpha: .87),
-    "secondary": adjust-color(color(black), $alpha: .54),
-    "icon":      adjust-color(color(black), $alpha: .54),
-    "hint":      adjust-color(color(black), $alpha: .26),
-    "disabled":  adjust-color(color(black), $alpha: .26)
+    "primary":   adjust-color(color(black), $alpha: -.13),
+    "secondary": adjust-color(color(black), $alpha: -.46),
+    "icon":      adjust-color(color(black), $alpha: -.62),
+    "hint":      adjust-color(color(black), $alpha: -.62),
+    "disabled":  adjust-color(color(black), $alpha: -.62)
   )
 );
 

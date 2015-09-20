@@ -26,14 +26,7 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color .1s linear;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: $action-alternate-color;
-  }
-
+  
   &:active,
   &:focus {
     outline: none;

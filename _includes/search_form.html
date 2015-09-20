@@ -2,5 +2,8 @@
   <form action="get" id="search_form">
     <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}">
   </form>
-  <ul id="search_results"></ul>
+  <div id="search_results" class="no_results">
+    <span class="results_count"></span>
+    <ul id="search_results_list"></ul>
+  </div>
 </div>
