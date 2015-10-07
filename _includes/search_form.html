@@ -1,8 +1,9 @@
 <div class="search">
   <form action="get" id="search_form">
-    <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}">
+    <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}" autocomplete="off">
   </form>
-  <div id="search_results" class="no_results">
+  <div id="search_results">
+    <span class="close-button"></span>
     <span class="results_count"></span>
     <ul id="search_results_list"></ul>
   </div>

@@ -65,7 +65,11 @@ jQuery(function() {
       // Are there any results?
       if (results.length) {
         // Populate the results counter text
-        $(".results_count").text("\"" + $("#search_box").val() + "\": " + results.length + " results");
+        $(".results_count").text("\"" + $("#search_box").val() + "\": " + results.length + " result");
+        if (results.length > 1) {
+            // Pluralize "results"
+            $(".results_count").text($(".results_count").text() + "s");
+        }
 
         // Clear any old results
         $search_results.empty();

@@ -20,13 +20,12 @@ $fonts_dir: "../fonts" !default;
 // Site Header
 header.site-header {
   @include outer-container(100%);
-  padding: .5rem 0;
+  padding-bottom: .5rem;
   background-color: $primary-color;
   color: text-color(light);
 
   * {
     display: inline-block;
-    // vertical-align: bottom;
     margin-bottom: 0;
   }
 
@@ -129,15 +128,21 @@ header.site-header {
   }
 
   div.search {
-    @include span-columns(.5);
+    @include span-columns(1);
+    @include shift(-.1);
     @include omega();
+    margin-top: .55rem;
     font-size: 1.5rem;
-    line-height: 4rem;
     color: text-color(dark);
 
     input {
+      @include transition(all 0.5s ease);
       position: relative;
+      width: 3rem;
       border: 0;
+      outline: none;
+      box-shadow: 2px 2px 10px -10px $divider-color;
+      padding: .5rem;
       background-color: transparent;
       cursor: pointer;
 
@@ -155,28 +160,34 @@ header.site-header {
       }
 
       &:focus {
-        width: 15rem;
         @include shift(-6);
-        padding: .25rem;
-        font-family: MavenPro;
+        width: 15rem;
         cursor: text;
         background-color: $accent-fallback2-color;
+        font-family: MavenPro;
       }
-
     }
 
     #search_results {
       @include shift(-1);
+      display: none;
       position: absolute;
-      margin-top: -1rem;
       width: 15rem;
-      padding: .5rem;
+      box-shadow: 2px 2px 10px -10px $divider-color;
+      padding: .5rem .5rem .5rem 1.25rem;
       background-color: $accent-fallback2-color;
       font-size: 1.2rem;
       line-height: normal;
 
-      &.no_results {
-        display: none;
+      &.search_active {
+        display: block;
+      }
+
+      .close-button::before {
+        content: $fa-var-times-circle;
+        margin-left: -.75rem;
+        font-family: FontAwesome;
+        color: text-color(dark, icon);
       }
 
       .results_count {
@@ -186,10 +197,11 @@ header.site-header {
       }
 
       ul {
+        display: block;
         margin: 1rem 0;
 
         li {
-          padding: 0 .5rem;
+          padding: 0 .8rem;
 
           a {
             text-decoration: underline;
