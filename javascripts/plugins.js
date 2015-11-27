@@ -1,4 +1,4 @@
-// Avoid `console` errors in browsers that lack a console.
+// Avoid 'console' errors in browsers that lack a console.
 (function() {
     var method;
     var noop = function () {};
@@ -86,6 +86,7 @@ jQuery(function() {
         });
 
       } else {
+        $(".results_count").text("\"" + $("#search_box").val() + "\": " + "no results");
         $search_results.html('<li>No results found</li>');
       }
     });

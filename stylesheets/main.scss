@@ -29,17 +29,15 @@ header.site-header {
     margin-bottom: 0;
   }
 
-  a {
-    color: $accent-fallback2-color;
-  }
-
-  li {
-    margin-right: 1rem;
+  button.menu {
+    @include span-columns(1);
+    background: none;
+    font-size: 1.5rem;
+    color: text-color(light);
   }
 
   h1.site-title {
-    @include span-columns(2);
-    @include shift(1);
+    @include span-columns(2.75);
     font-size: 2.8rem;
 
     a {
@@ -48,165 +46,100 @@ header.site-header {
   }
 
   h2.site-subtitle {
-    @include span-columns(4);
-    vertical-align: text-bottom;
-    text-align: left;
+    @include span-columns(8);
+    margin-top: 1rem;
+    // text-align: right;
     font-size: 1.6rem;
-    line-height: 4rem;
     font-weight: normal;
     color: text-color(light, secondary);
   }
+}
 
-  nav.site-nav {
-    @include span-columns(2);
-    @include omega();
-    text-align: right;
-    font-size: 1.8rem;
-    line-height: 4rem;
+// Menu
+nav.site-nav {
+  font-size: 1.8rem;
 
-    a {
-      text-transform: lowercase;
-    }
+  a {
+    text-transform: lowercase;
   }
+}
 
-  ul.social {
-    @include span-columns(2);
-    @include omega();
-    text-align: right;
-    font-size: 2rem;
-    line-height: 4rem;
+div.search {
+  margin-top: .55rem;
+  font-size: 1.5rem;
+  color: text-color(dark);
 
-    a {
+  input {
+    @include transition(all 0.5s ease);
+    position: relative;
+    width: 3rem;
+    border: 0;
+    outline: none;
+    box-shadow: 2px 2px 10px -10px $divider-color;
+    padding: .5rem;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include placeholder {
       color: text-color(light);
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: none;
-      }
     }
 
-    .fa {
-      &:hover,
-      &:active,
-      &:focus {
+    &:hover,
+    &:active,
+    &:focus {
+      @include placeholder {
+        color: $accent-fallback2-color;
         text-shadow: 1px 1px 1px color(black);
       }
     }
 
-    .fa-rss {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #fa9d4a;
-      }
-    }
-
-    .fa-twitter {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #5ea9dd;
-      }
-    }
-
-    .fa-github {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #181617;
-      }
-    }
-
-    .fa-linkedin {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #0077b5;
-      }
+    &:focus {
+      @include shift(-6);
+      width: 15rem;
+      cursor: text;
+      background-color: $accent-fallback2-color;
+      font-family: MavenPro;
     }
   }
 
-  div.search {
-    @include span-columns(1);
-    @include shift(-.1);
-    @include omega();
-    margin-top: .55rem;
-    font-size: 1.5rem;
-    color: text-color(dark);
+  #search_results {
+    // @include shift(-1);
+    display: none;
+    position: absolute;
+    width: 15rem;
+    box-shadow: 2px 2px 10px -10px $divider-color;
+    padding: .5rem .5rem .5rem 1.25rem;
+    background-color: $accent-fallback2-color;
+    font-size: 1.2rem;
+    line-height: normal;
 
-    input {
-      @include transition(all 0.5s ease);
-      position: relative;
-      width: 3rem;
-      border: 0;
-      outline: none;
-      box-shadow: 2px 2px 10px -10px $divider-color;
-      padding: .5rem;
-      background-color: transparent;
-      cursor: pointer;
-
-      @include placeholder {
-        color: text-color(light);
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        @include placeholder {
-          color: $accent-fallback2-color;
-          text-shadow: 1px 1px 1px color(black);
-        }
-      }
-
-      &:focus {
-        @include shift(-6);
-        width: 15rem;
-        cursor: text;
-        background-color: $accent-fallback2-color;
-        font-family: MavenPro;
-      }
+    &.search_active {
+      display: block;
     }
 
-    #search_results {
-      @include shift(-1);
-      display: none;
-      position: absolute;
-      width: 15rem;
-      box-shadow: 2px 2px 10px -10px $divider-color;
-      padding: .5rem .5rem .5rem 1.25rem;
-      background-color: $accent-fallback2-color;
-      font-size: 1.2rem;
-      line-height: normal;
+    .close-button::before {
+      content: $fa-var-times-circle;
+      margin-left: -.75rem;
+      font-family: FontAwesome;
+      color: text-color(dark, icon);
+    }
 
-      &.search_active {
-        display: block;
-      }
+    .results_count {
+      padding-left: .25rem;
+      font-size: 1.1rem;
+      color: text-color(dark, hint);
+    }
 
-      .close-button::before {
-        content: $fa-var-times-circle;
-        margin-left: -.75rem;
-        font-family: FontAwesome;
-        color: text-color(dark, icon);
-      }
+    ul {
+      display: block;
+      margin: 1rem 0;
 
-      .results_count {
-        padding-left: .25rem;
-        font-size: 1.1rem;
-        color: text-color(dark, hint);
-      }
+      li {
+        padding: 0 .8rem;
 
-      ul {
-        display: block;
-        margin: 1rem 0;
-
-        li {
-          padding: 0 .8rem;
-
-          a {
-            text-decoration: underline;
-            color: text-color(dark);
-          }
+        a {
+          text-decoration: underline;
+          color: text-color(dark);
         }
       }
     }
@@ -247,5 +180,56 @@ div.footer-asides {
 
   aside.blogroll {
     @include span-columns(5);
+  }
+}
+
+ul.social {
+  font-size: 1.5rem;
+
+  li {
+    display: inline-block;
+    margin-right: .5rem;
+  }
+
+  a {
+    color: text-color(dark);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .fa-rss {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fa9d4a;
+    }
+  }
+
+  .fa-twitter {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #5ea9dd;
+    }
+  }
+
+  .fa-github {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #181617;
+    }
+  }
+
+  .fa-linkedin {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #0077b5;
+    }
   }
 }
