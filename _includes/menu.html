@@ -1,21 +1,25 @@
-<div class="search">
-  <form action="get" id="search_form">
-    <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}" autocomplete="off">
-  </form>
-  <div id="search_results">
-    <span class="close-button"></span>
-    <span class="results_count"></span>
-    <ul id="search_results_list"></ul>
-  </div>
-</div>
+<div class="cover"></div>
 
-<nav class="site-nav">
-  <ul>
-    <li><a class="page-link" href="{{ site.baseurl }}articles.html">Articles</a></li>
-    {% for page in site.pages %}
-      {% if page.menuitem and page.title %}
-        <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+<div class="flyout">
+  <div class="search">
+    <form action="get" id="search_form">
+      <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}" autocomplete="off">
+    </form>
+    <div id="search_results">
+      <span class="close-button"></span>
+      <span class="results_count"></span>
+      <ul id="search_results_list"></ul>
+    </div>
+  </div>
+
+  <nav class="site-nav">
+    <ul>
+      <li><a class="page-link" href="{{ site.baseurl }}articles.html">Articles</a></li>
+      {% for page in site.pages %}
+        {% if page.menuitem and page.title %}
+          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

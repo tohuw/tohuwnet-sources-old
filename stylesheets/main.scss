@@ -18,6 +18,10 @@ $fonts_dir: "../fonts" !default;
 @include font-face("MavenPro Medium", "#{$fonts_dir}/mavenpro/maven_pro_medium-webfont", $file-formats: eot svg ttf woff);
 @include font-face("MavenPro Black", "#{$fonts_dir}/mavenpro/maven_pro_black-webfont", $file-formats: eot svg ttf woff);
 
+html.scrolllock {
+  overflow: hidden;
+}
+
 // Site Header
 header.site-header {
   @include outer-container(100%);
@@ -64,90 +68,99 @@ header.site-header {
 }
 
 // Menu
-nav.site-nav {
-  font-size: $base-font-size * 1.33;
-
-  a {
-    text-transform: lowercase;
-  }
+div.cover {
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: text-color(dark, disabled);
 }
 
-div.search {
-  margin-top: .55rem;
-  font-size: $base-font-size * 1.33;
-  color: text-color(dark);
+div.flyout {
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  background-color: $primary-alternate1-color;
 
-  input {
-    @include transition(all 0.5s ease);
-    position: relative;
-    width: 3rem;
-    border: 0;
-    outline: none;
-    box-shadow: 2px 2px 10px -10px $divider-color;
-    padding: .5rem;
-    background-color: transparent;
-    cursor: pointer;
+  nav.site-nav {
+    font-size: $base-font-size * 1.33;
 
-    @include placeholder {
-      color: text-color(light);
+    a {
+      text-transform: lowercase;
     }
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
+  div.search {
+    margin-top: .55rem;
+    font-size: $base-font-size * 1.33;
+    color: text-color(dark);
+
+    input {
+      border: 0;
+      outline: none;
+      width: 15rem;
+      box-shadow: 2px 2px 10px -10px $divider-color;
+      padding: .5rem;
+      // background-color: transparent;
+
       @include placeholder {
-        color: $accent-fallback2-color;
-        text-shadow: 1px 1px 1px color(black);
+        color: text-color(light);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        @include placeholder {
+          color: $accent-fallback2-color;
+          text-shadow: 1px 1px 1px color(black);
+        }
+      }
+
+      &:focus {
+        background-color: $accent-fallback2-color;
+        font-family: MavenPro;
       }
     }
 
-    &:focus {
-      @include shift(-6);
+    #search_results {
+      // @include shift(-1);
+      display: none;
+      position: absolute;
       width: 15rem;
-      cursor: text;
+      box-shadow: 2px 2px 10px -10px $divider-color;
+      padding: .5rem .5rem .5rem 1.25rem;
       background-color: $accent-fallback2-color;
-      font-family: MavenPro;
-    }
-  }
+      font-size: $base-font-size * 1.1;
+      line-height: normal;
 
-  #search_results {
-    // @include shift(-1);
-    display: none;
-    position: absolute;
-    width: 15rem;
-    box-shadow: 2px 2px 10px -10px $divider-color;
-    padding: .5rem .5rem .5rem 1.25rem;
-    background-color: $accent-fallback2-color;
-    font-size: $base-font-size * 1.1;
-    line-height: normal;
+      &.search_active {
+        display: block;
+      }
 
-    &.search_active {
-      display: block;
-    }
+      .close-button::before {
+        content: $fa-var-times-circle;
+        margin-left: -.75rem;
+        font-family: FontAwesome;
+        color: text-color(dark, icon);
+      }
 
-    .close-button::before {
-      content: $fa-var-times-circle;
-      margin-left: -.75rem;
-      font-family: FontAwesome;
-      color: text-color(dark, icon);
-    }
+      .results_count {
+        padding-left: .25rem;
+        font-size: $base-font-size * .9;
+        color: text-color(dark, hint);
+      }
 
-    .results_count {
-      padding-left: .25rem;
-      font-size: $base-font-size * .9;
-      color: text-color(dark, hint);
-    }
+      ul {
+        display: block;
+        margin: 1rem 0;
 
-    ul {
-      display: block;
-      margin: 1rem 0;
+        li {
+          padding: 0 .8rem;
 
-      li {
-        padding: 0 .8rem;
-
-        a {
-          text-decoration: underline;
-          color: text-color(dark);
+          a {
+            text-decoration: underline;
+            color: text-color(dark);
+          }
         }
       }
     }
@@ -159,6 +172,7 @@ div.mainbody {
   @include span-columns(10);
   @include shift(1);
   @include margin(2rem null 2rem null);
+  height: 100%;
 
   p {
     clear: left;
