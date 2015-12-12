@@ -116,20 +116,20 @@ recentposts_count: 3
 # Blogroll
 blogroll_title: More, Elsewhere
 blogroll:
+    - name: RoundTower Blog
+      subtitle: Interesting reading from my stellar employer
+      url: http://roundtower.com/blog
     - name: HighExecutive.Net
       subtitle: Ruminations of my illustrious wife
       url: http://highexecutive.net
-    - name: UberMarianne.com
-      subtitle: My Sister-In-Law Introspects
-      url: http://ubermarianne.net
     - name: Dadhacker
-      subtitle: Cantankerous and full of good stories
+      subtitle: Atari, Apple, Microsoft... He's seen some things
       url: http://dadhacker.com
-    - name: Punching Clouds
-      subtitle: A practical and interesting virtualization blog
-      url: http://punchingclouds.com
+    - name: Yellow Bricks
+      subtitle: A VMware CTO with great, usable thoughts
+      url: http://yellow-bricks.com
     - name: Cormac Hogan
-      subtitle: Virtualization and storage at a comprehenisble depth
+      subtitle: Software-Defined Storage Guru Extraordinaire
       url: http://cormachogan.com
 
 # Linkblog

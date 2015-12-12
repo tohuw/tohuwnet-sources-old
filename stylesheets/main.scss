@@ -7,6 +7,7 @@
   "bourbon/bourbon",
   "base/base",
   "neat/neat",
+  "include-media",
   "fontawesome/font-awesome"
 ;
 
@@ -22,23 +23,31 @@ header.site-header {
   @include outer-container(100%);
   padding-bottom: .5rem;
   background-color: $primary-color;
+  box-shadow: 0 .25rem .33rem rgba(0, 0, 0, 0.26);
   color: text-color(light);
 
   * {
-    display: inline-block;
     margin-bottom: 0;
   }
 
   button.menu {
     @include span-columns(1);
+    margin-top: rem(5);
     background: none;
-    font-size: 1.5rem;
+    font-size: $base-font-size * 1.33;
     color: text-color(light);
   }
 
+  div.headers {
+    @include span-columns (11);
+
+    * {
+      display: inline-block;
+    }
+  }
+
   h1.site-title {
-    @include span-columns(2.75);
-    font-size: 2.8rem;
+    font-size: $base-font-size * 2;
 
     a {
       color: inherit;
@@ -46,10 +55,9 @@ header.site-header {
   }
 
   h2.site-subtitle {
-    @include span-columns(8);
-    margin-top: 1rem;
-    // text-align: right;
-    font-size: 1.6rem;
+    @include media('<medium') { display: none; }
+    @include margin(1rem null null 1.5rem);
+    font-size: $base-font-size * 1.5;
     font-weight: normal;
     color: text-color(light, secondary);
   }
@@ -57,7 +65,7 @@ header.site-header {
 
 // Menu
 nav.site-nav {
-  font-size: 1.8rem;
+  font-size: $base-font-size * 1.33;
 
   a {
     text-transform: lowercase;
@@ -66,7 +74,7 @@ nav.site-nav {
 
 div.search {
   margin-top: .55rem;
-  font-size: 1.5rem;
+  font-size: $base-font-size * 1.33;
   color: text-color(dark);
 
   input {
@@ -110,7 +118,7 @@ div.search {
     box-shadow: 2px 2px 10px -10px $divider-color;
     padding: .5rem .5rem .5rem 1.25rem;
     background-color: $accent-fallback2-color;
-    font-size: 1.2rem;
+    font-size: $base-font-size * 1.1;
     line-height: normal;
 
     &.search_active {
@@ -126,7 +134,7 @@ div.search {
 
     .results_count {
       padding-left: .25rem;
-      font-size: 1.1rem;
+      font-size: $base-font-size * .9;
       color: text-color(dark, hint);
     }
 
@@ -150,41 +158,91 @@ div.search {
 div.mainbody {
   @include span-columns(10);
   @include shift(1);
-  margin-top: 2rem;
+  @include margin(2rem null 2rem null);
 
   p {
     clear: left;
-    font-size: 1.33rem;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: $base-font-size * 1.33;
   }
 
   ul.post-meta {
-    font-size: 1.15rem;
+    font-size: $base-font-size * .9;
   }
 
   figure.code-highlight-figure {
     @include span-columns(8);
+    @include media('<x-large') { @include span-columns(11); };
   }
 }
 
 // Site Footer
-div.footer-asides {
-  @include outer-container;
+footer.site-footer {
+  @include outer-container();
+  clear: both;
+  max-width: none;
+  padding-top: 2rem;
+  background-color: $primary-alternate2-color;
+  color: text-color(light);
 
-  aside.recentposts {
-    @include span-columns(7);
-  }
-
-  aside.blogroll {
-    @include span-columns(5);
+  a {
+    color: $action-alternate-color;
   }
 }
 
+aside {
+  margin-bottom: 1.5rem;
+
+  &.recentposts {
+    @include span-columns(6);
+    @include shift(.5);
+    @include media('<medium') {
+      @include shift(1);
+      @include omega();
+      clear: both;
+    };
+  }
+
+  &.blogroll {
+    @include span-columns(5);
+    @include media('<medium') {
+      @include shift(1);
+      @include omega();
+      clear: both;
+    };
+
+    span.subtitle {
+      &::before { content: ' - '; }
+      @include media('<large') { font-size: $base-font-size * .8 };
+      @include media('<medium') { display: none };
+      font-size: $base-font-size * .9;
+    }
+  }
+}
+
+p.site-info {
+  @include span-columns(9.25);
+  @include shift(.5);
+  @include media('<large') { font-size: $base-font-size * .7; }
+  font-size: $base-font-size * .9;
+}
+
+span.license {
+  &::before { content: "\\\\ "; }
+  @include media('<medium') {
+    &::before { content: ''; }
+    display: block
+  };
+  @include media('<large') { font-size: $base-font-size * .7; }
+  font-size: $base-font-size * .9;
+}
+
 ul.social {
-  font-size: 1.5rem;
+  @include span-columns(2.25);
+  @include media('<large') { display: none };
+  font-size: $base-font-size * 1.33;
 
   li {
     display: inline-block;
@@ -192,7 +250,7 @@ ul.social {
   }
 
   a {
-    color: text-color(dark);
+    color: text-color(light);
 
     &:hover,
     &:active,
@@ -221,7 +279,7 @@ ul.social {
     &:hover,
     &:active,
     &:focus {
-      color: #181617;
+      color: #4078c0;
     }
   }
 

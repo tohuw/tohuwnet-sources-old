@@ -3,7 +3,7 @@ $base-font-family:    'MavenPro';
 $heading-font-family: 'MavenPro Medium';
 
 // Font Sizes
-$base-font-size: 1.2rem;
+$base-font-size: rem(18);
 
 // Line Height
 $base-line-height:    1.5;
@@ -15,6 +15,16 @@ $base-spacing:       $base-line-height * 1em;
 $small-spacing:      $base-spacing / 2;
 $base-z-index:       0;
 
+// Breakpoints
+// Uses include-media (http://include-media.com)
+$breakpoints: (
+  'x-small': 320px,
+  'small':   375px,
+  'medium':  640px,
+  'large':   768px,
+  'x-large': 1080px
+) !default;
+
 // Scheme Choices
 // For the colors, try http://www.materialpalette.com and check _palette.scss
 $base-background-color:    color(white);
@@ -23,8 +33,8 @@ $primary-color:            color(brown);
 $primary-alternate1-color: color(brown, lighten-1);
 $primary-alternate2-color: color(brown, darken-2);
 $accent-color:             color(light-blue, accent-4);
-$accent-fallback1-color:   color(light-blue, accent-3);
-$accent-fallback2-color:   color(light-blue, accent-1);
+$accent-fallback1-color:   color(light-blue, accent-1);
+$accent-fallback2-color:   color(light-blue, accent-3);
 $action-color:             $accent-color;
 $action-alternate-color:   $accent-fallback1-color;
 

@@ -1,0 +1,6 @@
+<ul class="social">
+  {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}" {% if site.rss_title == "icon" %}class="fa fa-rss">{% else %}>{{ site.rss_title }}{% endif %}</a></li>{% endif %}
+  {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}" {% if site.twitter_title == "icon" %}class="fa fa-twitter">{% else %}>{{ site.twitter_title }}{% endif %}</a></li>{% endif %}
+  {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" target="github-{{ site.github_username }}" {% if site.github_title == "icon" %}class="fa fa-github">{% else %}>{{ site.github_title }}{% endif %}</a></li>{% endif %}
+  {% if site.linkedin_username %}<li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.linkedin_username }}" {% if site.github_title == "icon" %}class="fa fa-linkedin">{% else %}>{{ site.linkedin_title }}{% endif %}</a></li>{% endif %}
+</ul>

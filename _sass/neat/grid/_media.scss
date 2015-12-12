@@ -54,7 +54,7 @@
 ///    }
 ///  }
 
-@mixin media($query: $feature $value $columns, $total-columns: $grid-columns) {
+@mixin neat-media($query: $feature $value $columns, $total-columns: $grid-columns) {
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
       $default-grid-columns: $grid-columns;
