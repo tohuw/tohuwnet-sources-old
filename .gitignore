@@ -1,4 +1,4 @@
 _site
 .cache
 .*cache
-.Gemfile.lock
+Gemfile.lock
