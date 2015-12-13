@@ -49,7 +49,7 @@ group :stock do
   gem 'json', '>= 1.8.1'
   gem 'minitest', '>= 5.4.3'
   gem 'power_assert', '>= 0.2.2'
-  gem 'psych', '>= 2.0.0'
+  gem 'psych', '>= 2.0.16'
   gem 'rake', '>= 10.4.2'
   gem 'rdoc', '>= 4.2.0'
   gem 'test-unit', '>= 3.0.8'
