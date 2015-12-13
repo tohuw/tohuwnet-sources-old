@@ -1,6 +1,6 @@
-<div class="cover"></div>
+<div id="cover"></div>
 
-<div class="flyout">
+<div id="flyout">
   <div class="search">
     <form action="get" id="search_form">
       <input type="text" id="search_box" class="fa" title="Search this site" placeholder="{{ site.search_placeholder }}" autocomplete="off">
@@ -20,6 +20,12 @@
           <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
+      {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}">Feeds</a></li>{% endif %}
+      {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}">Twitter</a></li>{% endif %}
+      {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" target="github-{{ site.twitter_username }}">GitHub</a></li>{% endif %}
+      {% if site.linkedin_username %}<li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.twitter_username }}">LinkedIn</a></li>{% endif %}
     </ul>
   </nav>
+
+  {% include social_links.html %}
 </div>
