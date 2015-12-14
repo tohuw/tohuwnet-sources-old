@@ -25,12 +25,12 @@ $('#cover').click(function() {
 $('#search_box').on('input', function() {
     if ($(this).val().length > 2) {
         $(this).submit();
-        $('#search_results').addClass('active');
+        $('#search-results').addClass('active');
     }
 });
 
 // Close the search results when the "close button" is clicked
-$('#search_results .close-button').click(function() {
-    $('#search_results').removeClass('active');
+$('#search-results .close-button').click(function() {
+    $('#search-results').removeClass('active');
     $('#search_box').val('');
 });

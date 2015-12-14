@@ -20,15 +20,10 @@ Specifically, I work with information technology systems, which historically mea
 Unfortunately, there's a fairly sizable obstacle standing in the way of functioning software. It is a knotted mass of strings, wound and tied haphazardly around each other. These strings are problems, like:
 
 -   Computers and other hardware stuff break in some way.
-
 -   Software sometimes has bugs in it, so it doesn't do what it should.
-
 -   Software sometimes has features in it, so it does things not everyone wants it to do[^notabug].
-
 -   There's software that supports the software customers are thinking about, and that stuff has the same problems as above.
-
 -   People don't press the right buttons, causing some combination of the above to be presented as a now-critical issue.[^didtheybreakit]
-
 -   For the stuff to work in the first place, it must have been done with hardware and software that agrees with each other, which is in turn its own ball of string.
 
 My job is divided between trying to do things right the first time (Architecture), maintaining things to, where possible, avoid the aforementioned knotted mass (Administration, part 1) and suffering for when it isn't (Administration, part 2). This is a good fit for me, I think. I own what I dream up, which makes my dreams much more lucid. It also means that I can administrate from a "this ought to have happened better" mindset, which is both conductive to doing it better myself, and understanding the less readily apparent "better" some systems are, despite my differences of opinion on what better should be.

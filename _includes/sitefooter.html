@@ -25,7 +25,7 @@
       {% if site.blogroll_title %}<h2>{{ site.blogroll_title }}</h2>{% endif %}
       <ul class="blogroll-list">
         {% for link in site.blogroll %}
-          <li><a href="{{ link.url }}">{{ link.name }}</a>{% if link.subtitle %}<span class="subtitle"> {{ link.subtitle }}</span>{% endif %}</li>
+          <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if link.subtitle %}<span class="subtitle"> {{ link.subtitle }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     </aside>

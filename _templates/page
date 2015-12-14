@@ -3,6 +3,6 @@ layout: {{ layout }}
 title: "{{ title }}"
 permalink:
 menuitem: false
-redirect_from: /about/
-redirect_to:
+redirect_from:
+redirect_to: 
 ---

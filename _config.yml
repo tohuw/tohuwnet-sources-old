@@ -106,7 +106,7 @@ github_title: icon
 github_username:  tohuw
 facebook_title: icon
 facebook_username: tohuw
-disqus_shortname: tohuw
+disqus_shortname: 
 
 # Recent Posts List
 recentposts_display: true
@@ -118,7 +118,7 @@ blogroll_title: More, Elsewhere
 blogroll:
     - name: RoundTower Blog
       subtitle: Interesting reading from my stellar employer
-      url: http://roundtower.com/blog
+      url: http://www.roundtower.com/blog/
     - name: HighExecutive.Net
       subtitle: Ruminations of my illustrious wife
       url: http://highexecutive.net
@@ -145,6 +145,6 @@ linkblog:
   unorphan: true
   permalink_label: Permalink
 
-  # Readtime
-  readtime_display: true
-  readtime_title: icon
+# Readtime
+readtime_display: true
+readtime_title: icon

@@ -57,7 +57,7 @@ jQuery(function() {
   });
 
   function display_search_results(results) {
-    var $search_results = $("#search_results_list");
+    var $search_results = $("#search-results-list");
 
     // Wait for data to load
     window.data.then(function(loaded_data) {
@@ -65,10 +65,10 @@ jQuery(function() {
       // Are there any results?
       if (results.length) {
         // Populate the results counter text
-        $(".results_count").text("\"" + $("#search_box").val() + "\": " + results.length + " result");
+        $(".results-count").text("\"" + $("#search_box").val() + "\": " + results.length + " result");
         if (results.length > 1) {
             // Pluralize "results"
-            $(".results_count").text($(".results_count").text() + "s");
+            $(".results-count").text($(".results-count").text() + "s");
         }
 
         // Clear any old results
@@ -86,7 +86,7 @@ jQuery(function() {
         });
 
       } else {
-        $(".results_count").text("\"" + $("#search_box").val() + "\": " + "no results");
+        $(".results-count").text("\"" + $("#search_box").val() + "\": " + "no results");
         $search_results.html('<li>No results found</li>');
       }
     });

@@ -2,9 +2,9 @@
 layout: default
 ---
 <h1>Articles tagged with "{{ page.tag }}"</h1>
-<ul>
+<ul class="tag-page">
   {% for post in page.posts %}
-    <li><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
+    <li><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a> <span class="meta">({{ post.date | date_to_string }} • Tags: {{ post | tags }})</span></li>
   {% endfor %}
 </ul>
 

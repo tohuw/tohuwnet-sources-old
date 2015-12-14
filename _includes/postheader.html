@@ -32,6 +32,12 @@
 
     {% if site.readtime_display %}
       <li class="readtime" title"Estimated reading time">
+        {% if site.readtime_title == "icon" %}
+          <span class="readtime-title fa fa-clock-o">
+        {% else %}
+          <span class="readtime-title">{{ site.readtime_title }}
+        {% endif %}
+        </span>
         {% if content %}
           {% assign readtime = content | reading_time %}
         {% elsif post.content %}
