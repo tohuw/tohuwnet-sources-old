@@ -205,6 +205,7 @@ div.mainbody {
   @include shift(1);
   @include margin(2rem null 2rem null);
   height: 100%;
+  min-height: 60vh;
 
   p {
     clear: left;

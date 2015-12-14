@@ -5,7 +5,7 @@ description: >
   Ron Scott-Adams is a Systems Engineer, with a passion for
   creating, maintaining and explaining well-designed data centers,
   virtualization solutions, and information technology systems.
-baseurl: ""
+baseurl: "/"
 url: "https://tohuw.net"
 timezone: America/New_York
 
@@ -106,7 +106,7 @@ github_title: icon
 github_username:  tohuw
 facebook_title: icon
 facebook_username: tohuw
-disqus_shortname: 
+disqus_shortname:
 
 # Recent Posts List
 recentposts_display: true
