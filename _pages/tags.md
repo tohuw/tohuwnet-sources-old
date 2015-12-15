@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tag/
+permalink: tag/
 menuitem: false
 redirect_from:
 redirect_to:

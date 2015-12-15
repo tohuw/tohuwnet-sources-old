@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Rights"
-permalink: /rights/
+permalink: rights/
 menuitem: false
 redirect_from: /license/
 redirect_to:
