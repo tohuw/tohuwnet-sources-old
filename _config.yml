@@ -81,6 +81,9 @@ sass:
 # piwik_url: https://tohuw.net/stats
 # piwik_siteid: 1
 
+# Menu
+menuicons: true
+
 # Search
 search_enabled: true
 search_placeholder: "&#xf002;"

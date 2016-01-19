@@ -14,18 +14,16 @@
 
   <nav class="site-nav">
     <ul>
-      <li><a class="page-link" href="{{ site.baseurl }}articles.html">Articles</a></li>
+      <li><a class="page-link {% if site.menuicons %}fa fa-file-text-o{% endif %}" href="{{ site.baseurl }}articles.html">Articles</a></li>
       {% for page in site.pages %}
         {% if page.menuitem and page.title %}
-          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          <li><a class="page-link {% if site.menuicons and page.icon %}fa fa-{{page.icon}}{% endif %}" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
-      {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}">Feeds</a></li>{% endif %}
-      {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}">Twitter</a></li>{% endif %}
-      {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" target="github-{{ site.twitter_username }}">GitHub</a></li>{% endif %}
-      {% if site.linkedin_username %}<li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.twitter_username }}">LinkedIn</a></li>{% endif %}
+      {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}" class="fa fa-rss">Feeds</a></li>{% endif %}
+      {% if site.twitter_username %}<li><a {% if site.menuicons %}class="fa fa-twitter"{% endif %} href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}">Twitter</a></li>{% endif %}
+      {% if site.github_username %}<li><a {% if site.menuicons %}class="fa fa-github"{% endif %} href="https://github.com/{{ site.github_username }}" target="github-{{ site.github_username }}">GitHub</a></li>{% endif %}
+      {% if site.linkedin_username %}<li><a {% if site.menuicons %}class="fa fa-linkedin"{% endif %} href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.linkedin_username }}">LinkedIn</a></li>{% endif %}
     </ul>
   </nav>
-
-  {% include social_links.html %}
 </div>

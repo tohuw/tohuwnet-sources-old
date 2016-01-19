@@ -195,6 +195,11 @@ header.site-header {
 
     a {
       text-transform: lowercase;
+
+      &.fa:before {
+        padding-right: .5rem;
+        font-size: $base-font-size;
+      }
     }
   }
 }
@@ -333,6 +338,7 @@ footer.site-footer {
   @include outer-container();
   clear: both;
   max-width: none;
+  box-shadow: 0 -.25rem .33rem rgba(0, 0, 0, 0.26);
   padding-top: 2rem;
   background-color: $primary-alternate2-color;
   color: text-color(light);

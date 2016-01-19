@@ -5,6 +5,7 @@ permalink: ron-scott-adams/
 redirect_from: /about/
 redirect_to:
 menuitem: true
+icon: question-circle
 ---
 
 > We're stuck with technology when what we really want is just stuff that works.
