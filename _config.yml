@@ -45,6 +45,8 @@ destination: ../tohuw.github.io
 exclude:
   - vendor
   - README.md
+  - Gemfile
+  - Gemfile.lock
 markdown: kramdown
 minify_html: true
 html_press:
