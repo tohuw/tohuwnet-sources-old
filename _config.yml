@@ -41,6 +41,7 @@ draft_template: draft
 titlecase: true
 
 # Build settings
+destination: ../tohuw.github.io
 exclude:
   - vendor
   - README.md
