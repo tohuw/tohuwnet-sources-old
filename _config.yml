@@ -83,6 +83,9 @@ sass:
 
 # Menu
 menuicons: true
+menuitem_articles: true
+menuitem_tags: true
+menuitem_social: true
 
 # Search
 search_enabled: true

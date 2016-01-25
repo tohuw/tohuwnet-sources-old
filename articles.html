@@ -7,7 +7,10 @@ layout: default
   {% for post in site.posts %}
     <li>
       <h2><a title="Permalink to {{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      {% if site.disqus_shortname %} {% include disqus_count.html %} {% endif %}
+      <ul class="post-meta">
+        <li>{{ post.date | date: "%B %-d, %Y" }}</li>
+        {% if site.disqus_shortname %} <li>{% include disqus_count.html %}</li> {% endif %}
+      </ul>
     </li>
   {% endfor %}
 </ul>

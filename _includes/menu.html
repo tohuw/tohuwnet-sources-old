@@ -14,16 +14,19 @@
 
   <nav class="site-nav">
     <ul>
-      <li><a class="page-link {% if site.menuicons %}fa fa-file-text-o{% endif %}" href="{{ site.baseurl }}articles.html">Articles</a></li>
+      {% if site.menuitem_articles %}<li><a class="page-link {% if site.menuicons %}fa fa-file-text-o{% endif %}" href="/articles.html">Articles</a></li>{% endif %}
+      {% if site.menuitem_tags %}<li><a class="page-link {% if site.menuicons %}fa fa-tags{% endif %}" href="/tag/">Tags</a></li>{% endif %}
       {% for page in site.pages %}
         {% if page.menuitem and page.title %}
           <li><a class="page-link {% if site.menuicons and page.icon %}fa fa-{{page.icon}}{% endif %}" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
-      {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}" class="fa fa-rss">Feeds</a></li>{% endif %}
-      {% if site.twitter_username %}<li><a {% if site.menuicons %}class="fa fa-twitter"{% endif %} href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}">Twitter</a></li>{% endif %}
-      {% if site.github_username %}<li><a {% if site.menuicons %}class="fa fa-github"{% endif %} href="https://github.com/{{ site.github_username }}" target="github-{{ site.github_username }}">GitHub</a></li>{% endif %}
-      {% if site.linkedin_username %}<li><a {% if site.menuicons %}class="fa fa-linkedin"{% endif %} href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.linkedin_username }}">LinkedIn</a></li>{% endif %}
+      {% if site.menuitem_social %}
+        {% if site.rss_title %}<li><a href="{{ site.baseurl }}{{ plugins.feeds.permalinks.main_feed }}" class="fa fa-rss">Feeds</a></li>{% endif %}
+        {% if site.twitter_username %}<li><a {% if site.menuicons %}class="fa fa-twitter"{% endif %} href="https://twitter.com/{{ site.twitter_username }}" target="twitter-{{ site.twitter_username }}">Twitter</a></li>{% endif %}
+        {% if site.github_username %}<li><a {% if site.menuicons %}class="fa fa-github"{% endif %} href="https://github.com/{{ site.github_username }}" target="github-{{ site.github_username }}">GitHub</a></li>{% endif %}
+        {% if site.linkedin_username %}<li><a {% if site.menuicons %}class="fa fa-linkedin"{% endif %} href="https://linkedin.com/in/{{ site.linkedin_username }}" target="linkedin-{{ site.linkedin_username }}">LinkedIn</a></li>{% endif %}
+      {% endif %}
     </ul>
   </nav>
 </div>
