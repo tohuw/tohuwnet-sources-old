@@ -51,7 +51,7 @@ header.site-header {
   padding-bottom: .5rem;
   background-color: $primary-color;
   box-shadow: 0 .25rem .33rem rgba(0, 0, 0, 0.26);
-  color: text-color(light);
+  color: text-color(dark);
 
   * {
     margin-bottom: 0;
@@ -62,7 +62,7 @@ header.site-header {
     margin-top: rem(5);
     background: none;
     font-size: $base-font-size * 1.33;
-    color: text-color(light);
+    color: text-color(dark);
   }
 
   div.headers {
@@ -87,7 +87,7 @@ header.site-header {
     @include margin(1rem null null 1.5rem);
     font-size: $base-font-size * 1.5;
     font-weight: normal;
-    color: text-color(light, secondary);
+    color: text-color(dark, secondary);
   }
 }
 
@@ -114,7 +114,7 @@ header.site-header {
   position: absolute;
   height: 100%;
   z-index: 10;
-  background-color: color(white);
+  background-color: $primary-color;
 
   &:not(.slide-in) {
     z-index: -100
@@ -131,6 +131,7 @@ header.site-header {
       outline: none;
       width: 100%;
       height: 2rem;
+      background-color: $primary-color;
       padding: .5rem;
 
       @include placeholder {
@@ -152,7 +153,7 @@ header.site-header {
       min-height: 100%;
       overflow: hidden;
       padding: .5rem .5rem .5rem 1.25rem;
-      background-color: color(white);
+      background-color: $primary-color;
       font-size: $base-font-size * 1.1;
       line-height: normal;
 
@@ -218,7 +219,7 @@ div.mainbody {
 
   h1 {
     @include margin(.5rem null);
-    font-size: $base-font-size * 1.33;
+    font-size: $base-font-size * 1.5;
   }
 
   blockquote {
@@ -244,7 +245,7 @@ div.mainbody {
   }
 
   ul.post-meta {
-    margin-bottom: 1rem;
+    @include margin(0 null 1rem null);
     border-bottom: 1px solid $divider-color;
     font-size: $base-font-size * .9;
 
@@ -427,7 +428,7 @@ ul.social {
     &:hover,
     &:active,
     &:focus {
-      color: #5ea9dd;
+      color: #55acee;
     }
   }
 
@@ -435,7 +436,7 @@ ul.social {
     &:hover,
     &:active,
     &:focus {
-      color: #4078c0;
+      color: color(black);
     }
   }
 
@@ -443,7 +444,7 @@ ul.social {
     &:hover,
     &:active,
     &:focus {
-      color: #0077b5;
+      color: color(black);
     }
   }
 }
