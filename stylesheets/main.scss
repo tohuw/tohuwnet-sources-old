@@ -114,6 +114,7 @@ header.site-header {
   position: absolute;
   height: 100%;
   z-index: 10;
+  box-shadow: .5rem 0 .33rem -.25rem rgba(0, 0, 0, 0.26);
   background-color: $primary-color;
 
   &:not(.slide-in) {
