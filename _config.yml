@@ -131,15 +131,17 @@ blogroll:
     - name: HighExecutive.Net
       subtitle: Ruminations of my illustrious wife
       url: http://highexecutive.net
-    - name: Dadhacker
-      subtitle: Atari, Apple, Microsoft... He's seen some things
-      url: http://dadhacker.com
     - name: Yellow Bricks
       subtitle: A VMware CTO with great, usable thoughts
       url: http://yellow-bricks.com
+    - name: Dadhacker
+      subtitle: Atari, Apple, Microsoft... He's seen some things
+      url: http://dadhacker.com
     - name: Cormac Hogan
       subtitle: Software-Defined Storage Guru Extraordinaire
       url: http://cormachogan.com
+    - name: Punching Clouds
+      subtitle: Virtualization and cloud stuff from a VMware Architect
 
 # Linkblog
 linkblog:
