@@ -24,7 +24,7 @@
     <aside class="blogroll">
       {% if site.blogroll_title %}<h2>{{ site.blogroll_title }}</h2>{% endif %}
       <ul class="blogroll-list">
-        {% for link in site.blogroll %}
+        {% for link in site.blogroll | limit: {{ site.blogroll_footer_count }} %}
           <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if link.subtitle %}<span class="subtitle"> {{ link.subtitle }}</span>{% endif %}</li>
         {% endfor %}
       </ul>

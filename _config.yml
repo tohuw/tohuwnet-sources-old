@@ -124,6 +124,7 @@ recentposts_count: 3
 
 # Blogroll
 blogroll_title: More, Elsewhere
+blogroll_footer_count: 6
 blogroll:
     - name: RoundTower Blog
       subtitle: Interesting reading from my stellar employer
