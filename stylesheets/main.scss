@@ -276,6 +276,22 @@ div.mainbody {
     @include media('<x-large') { @include span-columns(11); };
   }
 
+  .embed-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
   ul.post-list li h2 {
     display: inline-block;
   }

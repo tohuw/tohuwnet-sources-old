@@ -160,3 +160,6 @@ linkblog:
 # Readtime
 readtime_display: true
 readtime_title: icon
+
+# Videos
+click_to_play_video: false
